@@ -1,0 +1,59 @@
+.title-content{
+	display: table-cell;
+	padding: 0 15px;
+	text-align: center;
+	vertical-align: middle;
+	width: 100%;
+}
+.title-section{
+	color:#424242;
+	margin:0 0 10px 0;
+}
+.project,
+.tools,
+.guide,
+.strategies,
+.model{
+	height: 100%;
+	padding: 100px 10px 70px 10px;
+	position:relative;
+	z-index:0;
+}
+.project,
+.guide,
+.strategies,
+.model,
+.tools{
+	background-color: #f2f5f7;
+}
+a{
+	color: #37474F;
+	&:hover{
+		color: #74BDB6;
+	}
+	&:active{
+		color: #455A64;
+	}
+}
+a, p, h3, h4, h5, h6{
+	font-family: 'Lato';
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html{
+	-ms-text-size-adjust:100%;
+	-webkit-text-size-adjust:100%;
+}
+body{
+	-moz-osx-font-smoothing: grayscale !important;
+	-webkit-font-smoothing: antialiased !important;
+}

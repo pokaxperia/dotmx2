@@ -1,0 +1,46 @@
+@mixin animation($args...){
+	-webkit-animation: $args;
+	-moz-animation: $args;
+	-ms-animation: $args;
+	animation: $args;
+}
+@mixin box-shadow($args...){
+	-webkit-box-shadow: $args;
+	-moz-box-shadow: $args;
+	-ms-box-shadow: $args;
+	box-shadow: $args;
+}
+@mixin border-radius($border){
+	-webkit-border-radius: $border;
+	-moz-border-radius: $border;
+	-ms-border-radius: $border;
+	border-radius: $border;
+}
+@mixin transition($args...){
+	-webkit-transition: $args;
+	-moz-transition: $args;
+	-o-transition: $args;
+	-ms-transition: $args;
+	transition: $args;
+}
+@mixin background-size($bsize){
+	-webkit-background-size: $bsize;
+	-moz-background-size: $bsize;
+	-o-background-size: $bsize;
+	-ms-background-size: $bsize;
+	background-size: $bsize;
+}
+@mixin transform($trans){
+	-webkit-transform: $trans;
+	-moz-transform: $trans;
+	-o-transform: $trans;
+	-ms-transform: $trans;
+	transform: $trans;
+}
+@mixin backface-visibility($trans){
+	-webkit-backface-visibility: $trans;
+	-moz-backface-visibility: $trans;
+	-o-backface-visibility: $trans;
+	-ms-backface-visibility: $trans;
+	backface-visibility: $trans;
+}

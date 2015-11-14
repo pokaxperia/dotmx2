@@ -1,0 +1,57 @@
+.about{
+	padding:20px 10px 40px;
+	position: relative;
+	z-index:0;
+}
+.about p{
+	color: #455A64;
+	font-size: 22px;
+	font-weight: 300;
+	strong{
+		font-weight: 500;
+	}
+}
+.copyright{
+	left: 0;
+	margin: 0;
+	padding: 10px 0;
+	text-align: center;
+	width: 100%;
+}
+.copyright p{
+	color: #455A64;
+	display: block;
+	font-size: inherit;
+	font-weight: 400;
+	margin: 0 auto;
+	text-align: center;
+	width: 334px;
+}
+.copyright p a{
+	color: #009688;
+}
+.copyright ul{
+	display: inline-block;
+	margin: 0;
+	text-align: center;
+	width: 100%;
+	padding: 0;
+}
+.copyright ul li{
+	display: inline-block;
+	padding-top: 30px;
+}
+.copyright ul li a{
+	text-decoration: none;
+}
+.copyright ul li a:hover i.dotmx_twitter:before{
+	color:#55acee !important;
+}
+.copyright ul li a:hover i.dotmx_facebook:before{
+	color:#31478E !important;
+}
+@media (min-width: 768px){
+	.about{
+		padding: 20px 100px 40px;
+	}
+}

@@ -1,0 +1,142 @@
+<section class="map" id="map_link">
+	<div id="mapa">
+		<div id="sidebar-left" class="sidebar collapsed sidebar-left">
+			<!-- Nav tabs -->
+			<ul class="sidebar-tabs" role="tablist">
+				<li><a data-tab="#poblacion" role="tab"><i class="fa fa-users"></i></a></li>
+				<li><a data-tab="#vivienda" role="tab"><i class="fa fa-home"></i></a></li>
+				<li><a data-tab="#unidades_economicas" role="tab"><i class="fa fa-money"></i></a></li>
+				<li><a data-tab="#personal_remunerado" role="tab"><i class="fa fa-users"></i></a></li>
+				<li><a data-tab="#equipamiento" role="tab"><i class="fa fa-building"></i></a></li>
+			</ul>
+
+			<!-- Tab panes -->
+			<div class="sidebar-content active">
+				<div>
+					<h5>Estación: <span id="info-Name"></span></h5>
+					<h5>Agencia: <span id="info-Agencia"></span></h5>
+				</div>
+				<div class="sidebar-pane active" id="poblacion">
+					<h3>Población</h3>
+					<div class="sl-body">
+						<ul id="listdata">
+							<!-- <li>Total de escuelas: <span id="info-Escuelas"></span></li>
+							<li>Centros de salud y asistencia médica: <span id="info-AsistMed"></span></li>
+							<li>Centros comerciales: <span id="info-CComerc"></span></li>
+							<li>Mercados: <span id="info-Mercados"></span></li>
+							<li>Templos: <span id="info-Templos"></span></li>
+							<li>Plazas: <span id="info-Plazas"></span></li>
+							<li>Instalaciones recreativas y deportivas: <span id="info-Deport"></span></li>
+							<li>Personal remunerado del sector primario: <span id="info-PerRemPrim"></span></li>
+							<li>Personal remunerado del sector secundario: <span id="info-PerRemSecu"></span></li>
+							<li>Personal remunerado del sector terciario: <span id="info-PerRemTerc"></span></li>
+							<li>Unidades económicas del sector primario: <span id="info-UEprim"></span></li>
+							<li>Unidades económicas del sector secundario: <span id="info-UEsecu"></span></li>
+							<li>Unidades económicas del sector terciario: <span id="info-UEterc"></span></li>
+							<li>Población total: <span id="info-PobTot"></span></li>
+							<li>Viviendas totales: <span id="info-VivTot"></span></li>
+							<li>Viviendas deshabitadas: <span id="info-VivDeshab"></span></li>
+							<li>Viviendas con automóvil: <span id="info-VivConAuto"></span></li>
+							<li>Viviendas con todos los servicios: <span id="info-VivTodServ"></span></li>
+							<li>Población ocupada: <span id="info-PobOcupada"></span></li>
+							<li>Población desocupada: <span id="info-PobDesocup"></span></li>
+							<li>Densidad de población promedio: <span id="info-DensPobAvg"></span></li> -->
+							
+							<li>Total: <span id="info-PobTot"></span></li>
+							<li>Densidad: <span id="info-Densidad"></span></li>
+							<li>Ocupada: <span id="info-PobOcupada"></span></li>
+							<li>Desocupada: <span id="info-PobDesocup"></span></li>
+							<li>Con discapacidad: <span id="info-discapacidad"></span></li>
+							<li>Nivel de marginación: <span id="info-marginacion"></span></li>
+							<li>Nivel socioeconómico: <span id="info-socioeconomico"></span></li>
+							<!--<li>Estación: <span id="info-Name"></span></li>-->
+							<!--<li>Agencia: <span id="info-Agencia"></span></li>-->
+						</ul>
+					</div>
+				</div>
+				<div class="sidebar-pane" id="vivienda">
+					<h3>Vivienda</h3>
+					<div class="sl-body">
+						<ul id="listdata">
+							<li>Totales: <span id="info-VivTot"></span></li>
+							<li>Con todos los servicios: <span id="info-VivTodServ"></span></li>
+							<li>Deshabitadas: <span id="info-VivDeshab"></span></li>
+							<li>Con automóvil: <span id="info-VivConAuto"></span></li>
+						</ul>
+					</div>
+				</div>
+				<div class="sidebar-pane" id="unidades_economicas">
+					<h3>Unidades económicas</h3>
+					<div class="sl-body">
+						<ul id="listdata">
+							<li>Totales: <span id="info-VivTot"></span></li>
+							<li>Sector primario: <span id="info-UEprim"></span></li>
+							<li>Sector secundario: <span id="info-UEsecu"></span></li>
+							<li>Sector terciario: <span id="info-UEterc"></span></li>
+						</ul>
+					</div>
+				</div>
+				<div class="sidebar-pane" id="personal_remunerado">
+					<h3>Personal remunerado</h3>
+					<div class="sl-body">
+						<ul id="listdata">
+							<li>Totales: <span id="info-VivTot"></span></li>
+							<li>Sector primario: <span id="info-PerRemPrim"></span></li>
+							<li>Sector secundario: <span id="info-PerRemSecu"></span></li>
+							<li>Sector terciario: <span id="info-PerRemTerc"></span></li>
+						</ul>
+					</div>
+				</div>
+				<div class="sidebar-pane" id="equipamiento">
+					<h3>Equipamiento</h3>
+					<div class="sl-body">
+						<ul id="listdata">
+							<li>Escuelas: <span id="info-Escuelas"></span></li>
+							<li>Centros de salud y asistencia médica: <span id="info-AsistMed"></span></li>
+							<li>Centros comerciales: <span id="info-CComerc"></span></li>
+							<li>Mercados: <span id="info-Mercados"></span></li>
+							<li>Templos: <span id="info-Templos"></span></li>
+							<li>Plazas: <span id="info-Plazas"></span></li>
+							<li>Instalaciones recreativas y deportivas: <span id="info-Deport"></span></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Map -->
+		<div id="map-box" class="sidebar-map"></div>
+		<div class="select-city">
+			<ul class="nav nav-pills" role="tablist" id="myTabs">
+				<li role="presentation">
+					<a class="open-city fa fa-chevron-left"></a>
+				</li>
+				<li role="presentation" class="active">
+					<a data-target="#ciudades" class="open-side fa fa-map-marker" aria-controls="ciudades" role="tab" data-toggle="tab" aria-expanded="true"></a>
+				</li>
+				<li role="presentation">
+					<a data-target="#transportes" class="open-transport fa fa-train" aria-controls="transportes" role="tab" data-toggle="tab" aria-expanded="false"></a>
+				</li>
+			</ul>
+			<div class="tab-content">
+				<div role="tabpanel" class="tab-pane fade in active" id="ciudades">
+					<h4 class="title-right">Ciudades</h4>
+					<ul class="nav nav-pills city" id="focus-city">
+						<li class="active"><a city="Ciudad de México" id="cdmx"><i class="fa fa-map-marker"></i>Ciudad de México</a></li>
+						<li><a city="Guadalajara" id="gdl"><i class="fa"></i>Guadalajara</a></li>
+						<li><a city="Puebla" id="puebla"><i class="fa"></i>Puebla</a></li>
+						<li><a city="Monterrey" id="mty"><i class="fa"></i>Monterrey</a></li>
+						<li><a city="Ciudad Juárez" id="juarez"><i class="fa"></i>Juárez</a></li>
+						<li><a city="León" id="leon"><i class="fa"></i>León</a></li>
+						<li><a city="Chihuahua" id="chihua"><i class="fa"></i>Chihuahua</a></li>
+						<li><a city="Aguascalientes" id="aguas"><i class="fa"></i>Aguascalientes</a></li>
+						<li><a city="Pachuca" id="pachuca"><i class="fa"></i>Pachuca</a></li>
+					</ul>
+				</div>
+				<div role="tabpanel" class="tab-pane" id="transportes">
+					<ul class="nav nav-pills city" id="focus-agency"></ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

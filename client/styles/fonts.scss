@@ -1,0 +1,110 @@
+@font-face {
+	font-family: "dotmx";
+	src: url("../iconfonts/dotmx.eot");
+	src: url("../iconfonts/dotmx.eot#iefix") format("embedded-opentype"),
+	url("../iconfonts/dotmx.woff") format("woff"),
+	url("../iconfonts/dotmx.ttf") format("truetype"),
+	url("../iconfonts/dotmx.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+[class^="dotmx-"]:before, [class*=" dotmx-"]:before,
+[class^="dotmx-"]:after, [class*=" dotmx-"]:after {   
+	font-family: dotmx;
+	font-size: 20px;
+	font-style: normal;
+	vertical-align: middle;
+	-moz-osx-font-smoothing: grayscale !important;
+	-webkit-font-smoothing: antialiased !important;
+	-ms-text-size-adjust:100%;
+	-webkit-text-size-adjust:100%;
+}
+.dotmx-pdf:before {
+	content: "\e000";
+}
+.dotmx-cross:before {
+	content: "\e001";
+}
+.dotmx-data108:before {
+	content: "\e002";
+}
+.dotmx-Infographic:before {
+	content: "\e003";
+}
+.dotmx-down:before {
+	content: "\e004";
+}
+.dotmx-marker:before {
+	content: "\e005";
+}
+.dotmx-facebook:before {
+	content: "\e006";
+}
+.dotmx-github:before {
+	content: "\e007";
+}
+.dotmx-twitter:before {
+	content: "\e008";
+}
+.dotmx-menu:before {
+	content: "\e009";
+}
+.dotmx-arrow-up:before {
+	content: "\e00a";
+}
+.dotmx-excel:before {
+	content: "\e00b";
+}
+.dotmx-pdf2:before {
+	content: "\e00c";
+}
+.dotmx-rar:before {
+	content: "\e00d";
+}
+.dotmx-transport2:before {
+	content: "\e00e";
+}
+.dotmx-transport21:before {
+	content: "\e00f";
+}
+.dotmx-transport:before {
+	content: "\e010";
+}
+.dotmx-excel2:before {
+	content: "\e011";
+}
+
+
+
+
+.dotmx-down:before {
+	font-size: 30px;
+	color:#455A64;
+}
+.dotmx-marker:before {
+	color:#70C1B7;
+	font-size: 13px;
+	margin-right: 5px;
+}
+.dotmx-facebook:before,
+.dotmx-twitter:before,
+.dotmx-github:before {
+	color:#455A64;
+}
+.dotmx-excel:before,
+.dotmx-excel2:before,
+.dotmx-pdf:before,
+.dotmx-pdf2:before,
+.dotmx-data108:before,
+.dotmx-Infographic:before,
+.dotmx-rar:before{
+	font-size: 60px !important;
+	color:#455A64;
+}
+.dotmx-transport2:before,
+.dotmx-transport21:before,
+.dotmx-transport:before {
+	color:#70C1B7;
+	font-size: 13px;
+	margin-right: 5px;
+}

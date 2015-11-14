@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Montserrat:400,700' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,100,300' rel='stylesheet' type='text/css'>
+	<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Quicksand' type='text/css'>
+
+	<!-- build:css css/styles.css -->
+	<!-- bower:css -->
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+	<link rel="stylesheet" href="bower_components/leaflet-sidebar/src/L.Control.Sidebar.css" />
+	<!-- endbower -->
+	<!-- inject:css -->
+	<link rel="stylesheet" href="styles/styles.css">
+	<!-- endinject -->
+	<!-- endbuild -->
+	<link href='https://api.mapbox.com/mapbox.js/v2.2.3/mapbox.css' rel='stylesheet' />
+	<script src='https://api.mapbox.com/mapbox.js/v2.2.3/mapbox.js'></script>
+	<!-- build:js js/lib.js -->
+	<!-- bower:js -->
+	<script src="bower_components/jquery/dist/jquery.js"></script>
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+	<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+	<script src="bower_components/leaflet-sidebar/src/L.Control.Sidebar.js"></script>
+	<script src="bower_components/numeral/numeral.js"></script>
+	<!-- endbower -->
+	<!-- endbuild -->
+</head>
+<body ng-app="dotmx">
+	<!--[if lt IE 7]>
+		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+
+	<!-- Add your site or application content here -->
+		<nav class="dot-menu" id="dotmenu">
+			<ul id="menuItems">
+				<li class="clickItem"><a ui-sref-active="active" ui-sref="main">Inicio</a></li>
+				<li class="clickItem"><a ui-sref-active="active" ui-sref="instrumentos">Instrumentos</a></li>
+				<li class="clickItem"><a ui-sref-active="active" ui-sref="guia">Guía</a></li>
+				<li class="clickItem"><a ui-sref-active="active" ui-sref="mapa">Mapa</a></li>
+				<li class="clickItem"><a ui-sref-active="active" ui-sref="estrategias">Estrategias</a></li>
+				<li class="clickItem"><a ui-sref-active="active" ui-sref="modelo">Modelo</a></li>
+			</ul>
+		</nav>
+		<div class="st-pusher"></div>
+		<header class="d-header">
+			<div class="container">
+				<div class="navbar-header">
+					<a href="#/" style="text-decoration:none;text-style:none;">
+						<h2>DOT <span style="color:#74BDB6;">MX</span></h2>
+					</a>
+				</div>
+				<div class="menu">
+					<menu-navigation></menu-navigation>
+				</div>
+			</div>
+		</header>
+	<div ui-view autoscroll="true"></div>
+	<!-- build:js js/app.js -->
+	<!-- inject:js -->
+	<script src="components/modernizr-custom.js"></script>
+	<script src="components/modules.js"></script>
+	<script src="components/routes.js"></script>
+	<script src="components/estrategias/estrategias.controller.js"></script>
+	<script src="components/guia/guia.controller.js"></script>
+	<script src="components/guia/guide.id.directive.js"></script>
+	<script src="components/guia/guide.steps.directive.js"></script>
+	<script src="components/instrumentos/card.directive.js"></script>
+	<script src="components/instrumentos/economicos.directive.js"></script>
+	<script src="components/instrumentos/instrumentos.controller.js"></script>
+	<script src="components/instrumentos/normativos.directive.js"></script>
+	<script src="components/main/main.controller.js"></script>
+	<script src="components/main/menu.directive.js"></script>
+	<script src="components/mapa/mapa.controller.js"></script>
+	<script src="components/modelo/modelo.controller.js"></script>
+	<script src="components/geojson/estaciones/CentroidesEstacionesPueblaGEO.geojson.js"></script>
+	<script src="components/geojson/estaciones/EstacionesInfoAgsCentroidesGEO.geojson.js"></script>
+	<script src="components/geojson/estaciones/EstacionesInfoChihuahuaCentroidesGEO.geojson.js"></script>
+	<script src="components/geojson/estaciones/EstacionesInfoGdlGeoCentroides.geojson.js"></script>
+	<script src="components/geojson/estaciones/EstacionesInfoJuarezCentroidesGEO.geojson.js"></script>
+	<script src="components/geojson/estaciones/EstacionesInfoLeonCentroidesGEO.geojson.js"></script>
+	<script src="components/geojson/estaciones/EstacionesInfoMtyGeoCentroides.geojson.js"></script>
+	<script src="components/geojson/estaciones/EstacionesInfoPachucaGeoCentroides.geojson.js"></script>
+	<script src="components/geojson/estaciones/EstacionesInfo_ZMVM_CentroidGEO.geojson.js"></script>
+	<script src="components/geojson/lineas/TrazoChihuahuaGEO.geojson.js"></script>
+	<script src="components/geojson/lineas/TrazoLineaPachucaGEO.geojson.js"></script>
+	<script src="components/geojson/lineas/TrazoLineasAGS_GEO.geojson.js"></script>
+	<script src="components/geojson/lineas/TrazoLineasGDL.geojson.js"></script>
+	<script src="components/geojson/lineas/TrazoPuebla1.geojson.js"></script>
+	<script src="components/geojson/lineas/TrazoTpteJuarez.geojson.js"></script>
+	<script src="components/geojson/lineas/TrazoTpteMonterrey.geojson.js"></script>
+	<script src="components/geojson/lineas/TrazoTroncalesLeonGEO.geojson.js"></script>
+	<script src="components/geojson/lineas/TrazosTpteZMVM.geojson.js"></script>
+	<!-- endinject -->
+
+	<!-- inject:template:js -->
+	<!-- endinject -->
+	<!-- endbuild -->
+</body>
+</html>

@@ -1,0 +1,26 @@
+section.project{
+	z-index:0;
+	.container{
+		> div{
+			margin-bottom: 30px;
+			h3{
+				strong{
+					color:#009688;
+					font-weight: 400;
+				}
+			}
+		}
+		p{
+			font-size:20px;
+			line-height:1.75;
+			font-weight: 300;
+			span{
+				font-weight:400;
+			}
+			a{
+				color:#009688;
+				font-weight:500;
+			}
+		}
+	}
+}

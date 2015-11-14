@@ -1,0 +1,6 @@
+# Ignore Directories
+bower_components
+build
+deploy.sh
+node_modules
+tmp
