@@ -4,3 +4,5 @@ build
 deploy.sh
 node_modules
 tmp
+client/**/.DS_Store
+.gitignore
