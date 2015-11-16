@@ -1,11 +1,10 @@
 section.project{
 	z-index:0;
+	padding: 35px 0px;
 	.container{
 		> div{
-			margin-bottom: 30px;
 			h3{
 				strong{
-					color:#009688;
 					font-weight: 400;
 				}
 			}
@@ -14,13 +13,18 @@ section.project{
 			font-size:20px;
 			line-height:1.75;
 			font-weight: 300;
+			@inlcude transition(all 0.25s ease-in-out);
 			span{
 				font-weight:400;
 			}
 			a{
-				color:#009688;
 				font-weight:500;
 			}
 		}
+	}
+}
+@media (min-width: 768px){
+	section.project{
+		padding: 35px 20px;
 	}
 }
