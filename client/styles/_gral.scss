@@ -1,3 +1,4 @@
+@import "_variables";
 .title-content{
 	display: table-cell;
 	padding: 0 15px;
@@ -6,8 +7,8 @@
 	width: 100%;
 }
 .title-section{
-	color:#424242;
-	margin:0 0 10px 0;
+	margin-top: 0;
+	margin-bottom: 20px;
 }
 .project,
 .tools,
@@ -37,6 +38,9 @@ a{
 }
 a, p, h3, h4, h5, h6{
 	font-family: 'Lato';
+}
+h1, h2, h3, h4, h5, h6{
+	color: $color-title;
 }
 * {
   -webkit-box-sizing: border-box;
