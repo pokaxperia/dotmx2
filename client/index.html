@@ -42,29 +42,33 @@
 	<![endif]-->
 
 	<!-- Add your site or application content here -->
-		<nav class="dot-menu" id="dotmenu">
-			<ul id="menuItems">
-				<li class="clickItem"><a ui-sref-active="active" ui-sref="main">Inicio</a></li>
-				<li class="clickItem"><a ui-sref-active="active" ui-sref="instrumentos">Instrumentos</a></li>
-				<li class="clickItem"><a ui-sref-active="active" ui-sref="guia">Guía</a></li>
-				<li class="clickItem"><a ui-sref-active="active" ui-sref="mapa">Mapa</a></li>
-				<li class="clickItem"><a ui-sref-active="active" ui-sref="estrategias">Estrategias</a></li>
-				<li class="clickItem"><a ui-sref-active="active" ui-sref="modelo">Modelo</a></li>
-			</ul>
-		</nav>
-		<div class="st-pusher"></div>
-		<header class="d-header">
-			<div class="container">
-				<div class="navbar-header">
-					<a href="#/" style="text-decoration:none;text-style:none;">
-						<h2>DOT <span style="color:#74BDB6;">MX</span></h2>
-					</a>
-				</div>
-				<div class="menu">
-					<menu-navigation></menu-navigation>
-				</div>
+	<nav class="navbar navbar-default navbar-fixed-top" menu-navigation ng-class="{sticky: $state.is('mapa')}">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#dotmenu" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#/">
+					<h2>DOT <span style="color:#74BDB6;">MX</span></h2>
+				</a>
 			</div>
-		</header>
+			<div class="collapse navbar-collapse" id="dotmenu">
+				<ul class="nav navbar-nav navbar-right">
+					<li ui-sref-active="active"><a ui-sref="main">Inicio</a></li>
+					<li ui-sref-active="active"><a ui-sref="instrumentos">Instrumentos</a></li>
+					<li ui-sref-active="active"><a ui-sref="guia">Guía</a></li>
+					<li ui-sref-active="active"><a ui-sref="mapa">Mapa</a></li>
+					<li ui-sref-active="active"><a ui-sref="estrategias">Estrategias</a></li>
+					<li ui-sref-active="active"><a ui-sref="modelo">Modelo</a></li>
+					<li ui-sref-active="active"><a ui-sref="descargas">Descargas</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
 	<div ui-view autoscroll="true"></div>
 	<!-- build:js js/app.js -->
 	<!-- inject:js -->
