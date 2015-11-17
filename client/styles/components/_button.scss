@@ -3,11 +3,13 @@
 	border-color: #ffffff;
 	border-radius: 3px;
 	color: #ffffff;
+	@include transition(all 0.25s ease-in-out);
 	&:hover,
 	&:focus,
 	&:active{
 		background-color: #ffffff;
 		color: $color-title;
+		@include box-shadow(0 3px 5px rgba(0, 0, 0, .125));
 		
 	}
 }
