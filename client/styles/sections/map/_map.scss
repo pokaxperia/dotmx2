@@ -22,7 +22,7 @@
   left: 0px !important;
 }*/
 .sidebar{
-  top:290px !important;
+  top:60px !important;
   overflow: hidden;
 }
 ul.sidebar-tabs{
@@ -31,7 +31,7 @@ ul.sidebar-tabs{
 	}
 }
 .leaflet-top.leaflet-left{
-  top:90px !important;
+  top:50px !important;
 }
 .sidebar-tabs > li.active{
   background-color: #32363e !important;
@@ -204,15 +204,11 @@ ul.sidebar-tabs{
 		list-style: none;
 		>li{
 			font-size: 16px;
-			margin-bottom: 5px;
 			span{
 				font-weight: 300;
 			}
 		}
 	}
-}
-.sidebar-left ~ .sidebar-map .leaflet-left {
-	left: 0 !important;
 }
 @media (min-width: 768px){
 
