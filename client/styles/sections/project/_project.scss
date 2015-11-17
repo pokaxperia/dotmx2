@@ -1,6 +1,7 @@
 section.project{
-	z-index:0;
+	background-color:#EEF2F5;
 	padding: 35px 0px;
+	z-index:0;
 	.container{
 		> div{
 			h3{
@@ -10,10 +11,10 @@ section.project{
 			}
 		}
 		p{
-			font-size:20px;
-			line-height:1.75;
-			font-weight: 300;
 			@inlcude transition(all 0.25s ease-in-out);
+			font-size:20px;
+			font-weight: 300;
+			line-height:1.75;
 			span{
 				font-weight:400;
 			}
