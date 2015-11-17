@@ -1,10 +1,47 @@
 @import "_variables";
+a{
+	color: $color-title;
+	&:hover{
+		color: #74BDB6;
+	}
+	&:active{
+		color: #455A64;
+	}
+}
+a, p, h3, h4, h5, h6{
+	font-family: 'Lato';
+}
+h1, h2, h3, h4, h5, h6{
+	color: $color-title;
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html{
+	-ms-text-size-adjust:100%;
+	-webkit-text-size-adjust:100%;
+}
+body{
+	-moz-osx-font-smoothing: grayscale !important;
+	-webkit-font-smoothing: antialiased !important;
+}
 .title-content{
 	display: table-cell;
 	padding: 0 15px;
 	text-align: center;
 	vertical-align: middle;
 	width: 100%;
+}
+.content-body {
+	padding: 50px 0 30px;
 }
 .t-content{
 	padding-top:10px;
@@ -56,37 +93,14 @@
 	position:relative;
 	z-index:0;
 }
-a{
-	color: $color-title;
-	&:hover{
-		color: #74BDB6;
-	}
-	&:active{
-		color: #455A64;
-	}
-}
-a, p, h3, h4, h5, h6{
-	font-family: 'Lato';
-}
-h1, h2, h3, h4, h5, h6{
-	color: $color-title;
-}
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-*:before,
-*:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-html{
-	-ms-text-size-adjust:100%;
-	-webkit-text-size-adjust:100%;
-}
-body{
-	-moz-osx-font-smoothing: grayscale !important;
-	-webkit-font-smoothing: antialiased !important;
+div.wash {
+	background: linear-gradient(to bottom, rgba(52, 84, 62, 0.25) 0, rgba(52, 84, 62, 0.45) 30%, rgba(52, 84, 62, 0.45) 100%);
+	display: block;
+	height: 450px;
+	left: 0;
+	min-width: 100%;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 0;
 }
