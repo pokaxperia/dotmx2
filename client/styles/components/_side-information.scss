@@ -6,29 +6,29 @@
 	font-weight: 200;
 	height: 100%;
 	overflow-y: auto;
-	padding:15px;
+	padding:60px 15px;
 	position: fixed;
 	right: -100%;
 	top: 0;
 	width: 100%;
 	z-index:5;
-	h1{
+	h3{
 		border-bottom: 1px solid #74BDB6;
 		color: $color-title;
-		font-weight: 300;
-		margin-bottom: 30px;
-		margin-top: 25px;
+		display: inline-block;
+		font-weight: 400;
+		margin-bottom: 0px;
+		margin-top: 10px;
 		padding-bottom: 10px;
 	}
-	h3{
-		color: #3E4759;
-		margin-top: 30px;
+	h4{
+		margin: 20px 0 15px;
 	}
 	p{
 		color: #455A64;
 		font-weight: 300;
-		margin-bottom: 20px;
-		font-size: 1.5em;
+		margin-top: 20px;
+		font-size: 18px;
 	}
 	i.dotmx-cross{
 		cursor: pointer;
@@ -36,14 +36,14 @@
 		float: right;
 		text-align: right;
 		&:before{
-			color: $color-title;
+			color: #97A0AF;
 			font-size: 40px;
 		}
 	}
 	ul{
 		>li{
 			color: #455A64;
-			font-size: 1.45em;
+			font-size: 18px;
 			font-weight: 500;
 		}
 		>ul{
@@ -64,7 +64,7 @@
 	.get-information{
 		right: -600px;
 		width: 600px;
-		padding:50px;
+		padding:60px 50px;
 		&.show{
 			right: 0;
 			z-index: 5;

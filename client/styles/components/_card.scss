@@ -2,14 +2,17 @@ article.card{
 	@include transition(all 0.25s linear);
 	background-color:#ffffff;
 	border-radius: 5px;
-	border: 1px solid rgba($color-title, 0.25);
-	cursor: pointer;
-	height: 150px;
+	border: 1px solid rgba($color-title, 0.125);
+	height: 160px;
 	margin-bottom: 20px;
 	position: relative;
 	text-align:center;
-	@include box-shadow(0px 2px 25px -5px #888888);
 	.card-body{
+		bottom: 35px;
+		left: 0;
+		position: absolute;
+		right: 0;
+		top: 0;
 		h3{
 			@include transform(translateY(-50%));
 			display: inline-block;
@@ -38,56 +41,49 @@ article.card{
 				vertical-align: middle;
 			}
 		}
-		small{
-			@include transition(visibility 0.15s linear);
-			border-bottom: 1px solid rgba($color-title,0.5);
-			bottom: 10px;
-			display: table;
-			left: 20px;
-			position: absolute;
-			right: 0;
-			font-size: 14px;
-			color: rgba($color-title, 0.85);
-			text-align: left;
-		}
 	}
-	&.active-card{
-		background-color: rgba($color-title, 0.6);
-		border-color: transparent;
-		color: #ffffff;
-		h3{
-			@include transition(font-weight 0.25s linear);
-			font-weight: 500;
+	.card-action{
+		background-color: #fff;
+		border-top: 1px solid rgba($color-title,0.25);
+		bottom: 0;
+		cursor: pointer;
+		left: 0;
+    padding:7px 10px;
+    position: absolute;
+    right: 0;
+    text-align: right;
+		a{
+			color: #97A0AF;
+			text-decoration: none;
 		}
 		i{
-			color: #ffffff;
-			visibility: visible;
+			margin-left: 10px;
+			&:before{
+				color: #97A0AF;
+				font-size: 20px;
+				vertical-align: bottom;
+			}
 		}
-		small{
+		&:hover,
+		&:active,
+		&.active-card{
+			background-color: #97A0AF;
 			color: #ffffff;
-			border-color: #ffffff;
+			a{
+				color: #ffffff;
+			}
+			i{
+				&:before{
+					color: #ffffff;
+				}
+			}
 		}
 	}
 }
+.cards{
+	background-color: #EEF2F5;
+	padding: 50px 0;
+}
 @media (min-width: 768px){
-	article.card{
-		&:hover,
-		&.active-card{
-			background-color: rgba($color-title, 0.6);
-			border-color: transparent;
-			color: #ffffff;
-			h3{
-				@include transition(font-weight 0.25s linear);
-				font-weight: 500;
-			}
-			i{
-				color: #ffffff;
-				visibility: visible;
-			}
-			small{
-				color: #ffffff;
-				border-color: #ffffff;
-			}
-		}
-	}
+
 }
