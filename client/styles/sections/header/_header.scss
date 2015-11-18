@@ -25,10 +25,11 @@
 		padding:20px 0;
 		z-index: 10;
 		.navbar-nav > li > a{
+			@include transition(all 0.25s ease-in-out);
 			border-bottom: 1px solid transparent;
 			color: #ffffff;
+			font-size: 16px;
 			padding: 10px;
-			@include transition(all 0.25s ease-in-out);
 			&:hover{
 				background-color: transparent;
 				border-bottom: 1px solid #ffffff;
