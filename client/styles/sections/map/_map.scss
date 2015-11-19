@@ -170,31 +170,30 @@ ul.sidebar-tabs{
 		background-color:rgba(69, 90, 100, 0.09);
 		border-bottom: 1px solid rgba($color-title, 0.5);
 		padding-bottom: 10px;
-		h5{
-			font-size: 20px;
+		h4{
 			font-weight: 500;
 			color: $color-title;
 			margin: 0;
 			padding: 10px 20px 0;
 			span{
 				font-weight: 400;
-				font-size: 18px;
+				font-size: 16px;
 			}
 		}
 	}
 }
 .sidebar-pane{
-	h3{
-		font-size: 20px;
-		margin-top: 0;
+	h4{
 		color: $color-title;
 		font-weight: 500;
+		margin-bottom: 5px;
+		margin-top: 0;
 	}
 	#listdata{
 		padding-left: 20px;
 		list-style: none;
 		>li{
-			font-size: 16px;
+			font-size: 14px;
 			span{
 				font-weight: 300;
 			}
