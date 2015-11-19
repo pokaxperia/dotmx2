@@ -37,8 +37,8 @@ $ sudo npm install
 Install packages and dependencies
 -------
 Replace:
--bower_components/leaflet-sidebar/src/L.Control.Sidebar.css
--bower_components/leaflet-sidebar/src/L.Control.Sidebar.js
+- bower_components/leaflet-sidebar/src/L.Control.Sidebar.css
+- bower_components/leaflet-sidebar/src/L.Control.Sidebar.js
 
 With this:
 [download files from dropbox](https://www.dropbox.com/home/leaflet).
