@@ -20,6 +20,7 @@
 			{"coordenadas": [21.876951611919733, -102.3012113571167],"zoom": 13},
 			{"coordenadas": [20.117114283545682, -98.74726295471191],"zoom": 13}
 		]
+
 		var geojsonMarkerOptions = {
 			radius: 10,
 			fillColor: "#74BDB6",
@@ -30,8 +31,7 @@
 			opacity: 1,
 			fillOpacity: 1
 		};
-	
-		
+
 		var geojsonMarkerOptions2 = {
 			radius: 30,
 			fillColor: "#74BDB6",
@@ -52,6 +52,7 @@
 		// Load tiles and get accessToken
 		L.mapbox.accessToken = 'pk.eyJ1IjoiY2Fhcmxvc2h1Z28xIiwiYSI6IklmZGNsNmMifQ.JJksWU3hBP-Vd3S9WtjFsA';
 		map = L.mapbox.map('map-box', 'caarloshugo1.h9bggm26',{scrollWheelZoom:true}).setView([19.432711775616433, -99.13325428962708], 13);
+
 		loadCity(estaciones_zmvm, lineas_zmvm, cdmx);
 		
 		//Add Sidebar
@@ -61,7 +62,6 @@
 		function loadCity(estaciones, lineas, ciudad){
 			$timeout(function(){
 				print(estaciones, lineas, ciudad);
-				//$(".open-transport").css("display", "block");
 				$("#myTabs a:last").tab('show');
 			}, 1000);
 		}
@@ -144,9 +144,9 @@
 						return L.circleMarker(latlng, geojsonMarkerOptions);
 					}
 				});
+
 				estacionesLayer.addLayer(estacionesGeo);
 				estacionesLayer.addTo(map);
-				
 				// Open transports
 				$("#focus-agency").html("");
 					if(agencies.length > 1) {
@@ -323,6 +323,8 @@
 			circleLayer.clearLayers();
 			sidebarLeft.close();
 		});
+
+		
 	};
 	
 	MapaController.$inject = ['$timeout', '$scope'];
