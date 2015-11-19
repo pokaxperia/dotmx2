@@ -80,16 +80,28 @@ $ gulp dev
 ```
 For Production
 -------
-If edit html:
-Run:
+If edit html, run:
 - **gulp templatecache**
 - **gulp html**
 - **gulp join**
 
-1. Run **gulp join**.
+
+If edit js, run:
+- **gulp join**
+
+Gulp tasks
+-------
+  ```js
+  $ gulp teemplatecache
+  ```
+  load templates directly into the cache in a script tag, or by consuming the $templateCache service directly.
+  
+    ```js
+  $ gulp html
+  ```
+  to copy all html files into respective directory, into build/components
 
   ```js
   $ gulp join
   ```
   this concatenate all css ans js into respective file (styles.css, app.js and lib.js) for production.
-
