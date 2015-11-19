@@ -34,11 +34,11 @@
 [class^="custom-"], [class*=" custom-"] {
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
+	-ms-text-size-adjust:100%;
+	-webkit-text-size-adjust:100%;
 	font-family: 'custom';
 	font-style: normal;
-	font-variant: normal;
 	font-weight: normal;
-	line-height: 1;
 	speak: none;
 	text-transform: none;
 }
@@ -134,27 +134,23 @@
 	margin-right: 5px;
 }
 
-.custom-database:before {
-	content: "\e900";
-	font-size: 31px !important;
-}
 .custom-externallink:before {
+	content: "\e900";
+}
+.custom-database:before {
 	content: "\e901";
-	font-size: 31px !important;
 }
 .custom-files:before {
 	content: "\e902";
 }
 .custom-infography:before {
 	content: "\e903";
-	font-size: 33px !important;
 }
 .custom-pdf:before {
 	content: "\e904";
 }
 .custom-question:before {
 	content: "\e905";
-	font-weight: bold;
 }
 .custom-xls:before {
 	content: "\e906";
