@@ -34,6 +34,10 @@
 				url: '/modelo',
 				controller: 'ModeloController',
 				templateUrl: './components/modelo/modelo.html'
+			})
+			.state('descargas', {
+				url: '/descargas',
+				templateUrl: './components/descargas/descargas.html'
 			});
 	}]);
 
