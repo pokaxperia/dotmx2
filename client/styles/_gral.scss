@@ -70,6 +70,7 @@ body{
 	}
 	.downloads{
 		margin-bottom: 15px;
+		display: table;
 	}
 	i:before{
 		color: $color-title;
@@ -77,11 +78,12 @@ body{
 		vertical-align: middle;
 	}
 	i{
+		display: table-cell;
 		margin-right: 15px;
+		padding-right: 15px;
 	}
 	a{
 		font-size: 20px;
-		vertical-align: middle;
 		&:hover{
 			text-decoration: none;
 			i:before{
