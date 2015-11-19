@@ -9,7 +9,7 @@ section.tools{
 		background-repeat: no-repeat;
 		background-size: cover!important;
 		background: url('../images/tools_b1.jpg');
-		height: 450px;
+		height: 400px;
 		padding: 0;
 		.container{
 			display: table;
@@ -23,7 +23,7 @@ section.tools{
 				.title-section{
 					color: #ffffff;
 					font-size: 35px;
-					text-align: center;
+					text-align: left;
 					margin-bottom: 0;
 				}
 				span{
@@ -31,7 +31,7 @@ section.tools{
 					display: block;
 					font-size:20px;
 					font-weight: 200;
-					text-align: center;
+					text-align: left;
 				}
 				>div:nth-child(1){
 					margin-bottom: 30px;
@@ -136,6 +136,7 @@ section.tools{
 		.intro-tools{
 			>.container{
 				section.container-title{
+					padding: 0;
 					.title-section{
 						font-size: 40px;
 						text-align: left;

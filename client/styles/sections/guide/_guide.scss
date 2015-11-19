@@ -9,7 +9,7 @@ section.guide{
 		background-repeat: no-repeat;
 		background-size: cover!important;
 		background: url('../images/guide_b1.jpg');
-		height: 450px;
+		height: 400px;
 		padding: 0;
 		.container{
 			display: table;
@@ -23,7 +23,7 @@ section.guide{
 				.title-section{
 					color: #ffffff;
 					font-size: 35px;
-					text-align: center;
+					text-align: left;
 					margin-bottom: 0;
 				}
 				span{
@@ -31,7 +31,7 @@ section.guide{
 					display: block;
 					font-size:20px;
 					font-weight: 200;
-					text-align: center;
+					text-align: left;
 				}
 				>div:nth-child(1){
 					margin-bottom: 30px;
