@@ -102,6 +102,7 @@
   }
   article{
     background-color: rgba(0,0,0,0.5);
+    height: 200px;
     margin-bottom: 30px;
     overflow: hidden;
     position: relative;
@@ -143,6 +144,34 @@
     }
   }
 }
+.tools-b{
+  background: url('../images/files.jpg');
+}
+.guide-b{
+  background: url('../images/files.jpg');
+}
+.strategies-b{
+  background: url('../images/files.jpg');
+}
+.model-b{
+  background: url('../images/model_b.jpg');
+}
+.map-b{
+  background: url('../images/files.jpg');
+}
+.files-b{
+  background: url('../images/files.jpg');
+}
+.guide-b,
+.strategies-b,
+.model-b,
+.map-b,
+.files-b,
+.tools-b{
+  @include background-size(100% 100%);
+  background-position: 50% 50%;
+  @include transition(all 0.25s ease-in-out);
+}
 @media (min-width: 768px){
   .main h1{
     margin:20px 100px;
@@ -155,12 +184,12 @@
       padding: 0 15px;
     }
     article{
-      background-color: rgba(0,0,0,0.5);
+      height: 280px;
       overflow: hidden;
       position: relative;
       text-align: center;
       span{
-        background-color: rgba(0,0,0,0.55);
+        background-color: rgba(0,0,0,0.65);
       }
       >div{
         p,
@@ -179,12 +208,9 @@
         }
       }
       &:hover{
-        img{
-          @include transform(scale(1.1));
-          background-color: rgba(0, 0, 0, 0.67);
-        }
+        @include background-size(120% 120%);
         span{
-          background-color: rgba(0,0,0,0.25);
+          background-color: rgba(0,0,0,0.4);
         }
       }
     }
