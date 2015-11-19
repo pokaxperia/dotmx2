@@ -168,7 +168,7 @@
 .map-b,
 .files-b,
 .tools-b{
-  @include background-size(100% 100%);
+  @include background-size(100% 200%);
   background-position: 50% 50%;
   @include transition(all 0.25s ease-in-out);
 }
@@ -217,6 +217,24 @@
   }
 }
 @media (min-width: 992px){
+  .guide-b,
+  .strategies-b,
+  .model-b,
+  .map-b,
+  .files-b,
+  .tools-b{
+    @include background-size(100% 120%);
+  }
+  .section-content{
+    >div{
+      padding: 0 15px;
+    }
+    article{
+      &:hover{
+        @include background-size(120% 140%);
+      }
+    }
+  }
   .get-information{
     right: -700px;
     width: 700px;
