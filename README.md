@@ -61,8 +61,8 @@ Folder Structure
 |--client               # Main DEV
 |   |_ components
 |   |   |_ ...          # html and js components (angular)
-|   |   |_ emus.module  # Main angular module
-|   |   |_ emus.routes  # Routes
+|   |   |_ modules.js  # Main angular module
+|   |   |_ routes.js  # Routes
 |   |_ iconfonts
 |   |_ images
 |   |_ js
@@ -80,7 +80,12 @@ $ gulp dev
 ```
 For Production
 -------
-  
+If edit html:
+Run:
+- **gulp templatecache**
+- **gulp html**
+- **gulp join**
+
 1. Run **gulp join**.
 
   ```js
