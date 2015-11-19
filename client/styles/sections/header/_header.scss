@@ -4,6 +4,7 @@
 		padding: 8.5px 15px;
 		h2{
 			margin: 0;
+			color: $color-title;
 		}
 	}
 	.navbar-toggle{
@@ -32,6 +33,12 @@
 		border-color: transparent;
 		padding:20px 0;
 		z-index: 10;
+		.navbar-brand{
+			h2{
+				margin: 0;
+				color: #ffffff;
+			}
+		}
 		.navbar-nav > li > a{
 			@include transition(all 0.25s ease-in-out);
 			border-bottom: 1px solid transparent;
@@ -56,6 +63,13 @@
 			background-color: #ffffff;
 			border-color: rgba($color-title, 0.125);
 			padding:initial;
+			.navbar-brand{
+				padding: 8.5px 15px;
+				h2{
+					margin: 0;
+					color: $color-title;
+				}
+			}
 			.navbar-nav > li > a{
 				color: $color-title;
 				border-bottom: 0;
