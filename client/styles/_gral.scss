@@ -45,7 +45,7 @@ body{
 }
 .t-content{
 	padding-top:10px;
-	padding-bottom: 20px;
+	padding-bottom: 25px;
 	>div.row{
 		padding: 30px 0 15px;
 	}
@@ -56,9 +56,20 @@ body{
 	}
 	p{
 		color: $color-title;
-		font-size: 1.5em;
+		font-size: 20px;
 		font-weight: 300;
 		margin-bottom: 20px;
+	}
+	ul{
+		display: block;
+		li{
+			color: $color-title;
+			font-size: 18px;
+			font-weight: 500;
+		}
+	}
+	.downloads{
+		margin-bottom: 15px;
 	}
 	i:before{
 		color: $color-title;
@@ -69,10 +80,10 @@ body{
 		margin-right: 15px;
 	}
 	a{
-		text-decoration: underline;
 		font-size: 20px;
 		vertical-align: middle;
 		&:hover{
+			text-decoration: none;
 			i:before{
 				color: #74BDB6;
 			}
@@ -96,7 +107,7 @@ body{
 div.wash {
 	background: linear-gradient(to bottom, rgba(52, 84, 62, 0.25) 0, rgba(52, 84, 62, 0.45) 30%, rgba(52, 84, 62, 0.45) 100%);
 	display: block;
-	height: 450px;
+	height: 400px;
 	left: 0;
 	min-width: 100%;
 	position: absolute;
