@@ -83,10 +83,9 @@ For Production
 If edit html, run:
 - **gulp templatecache**
 - **gulp html**
-- **gulp join**
 
 
-If edit js, run:
+If edit js/css, run:
 - **gulp join**
 
 
