@@ -81,7 +81,7 @@
 		// Load tiles and get accessToken
 		L.mapbox.accessToken = 'pk.eyJ1IjoiY2Fhcmxvc2h1Z28xIiwiYSI6IklmZGNsNmMifQ.JJksWU3hBP-Vd3S9WtjFsA';
 		map = L.mapbox.map('map-box', 'caarloshugo1.h9bggm26',{scrollWheelZoom:true}).setView([19.432711775616433, -99.13325428962708], 13);
-
+		
 		loadCity(estaciones_zmvm, lineas_zmvm, cdmx);
 		
 		//Add Sidebar
@@ -93,6 +93,7 @@
 				print(estaciones, lineas, ciudad);
 				$("#myTabs a:last").tab('show');
 			}, 1000);
+			
 		}
 		function setMapView(coor, z){
 			map.setView(coor, parseInt(z));
@@ -347,7 +348,7 @@
 				});
 			}
 		}
-		
+
 		map.on('click', function(e) {
 			circleLayer.clearLayers();
 			sidebarLeft.close();
