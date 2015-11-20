@@ -2,7 +2,7 @@
 	'use strict';
 	
 	var MapaController = function($timeout, $scope){
-		var map = false;
+		var map = false, newZoom, newRadius, currentZoom, previousZoom;
 		var sidebarLeft = false;
 		var sidebarRight = false;
 		var agencies = new Array();
@@ -22,7 +22,7 @@
 		]
 
 		var geojsonMarkerOptions = {
-			radius: 10,
+			radius: 6,
 			fillColor: "#74BDB6",
 			color: "#fff",
 			stroke: "#fff",
@@ -31,6 +31,35 @@
 			opacity: 1,
 			fillOpacity: 1
 		};
+		
+		function setZoom(zoom){
+			previousZoom = currentZoom;
+			currentZoom = zoom;
+
+			previousZoom <= currentZoom ? newRadius = currentZoom - 5 : newRadius = currentZoom - 6;
+			estacionesLayer.eachLayer(function(e){
+				e.setStyle({
+					radius: newRadius
+				});
+			});
+			console.log("Zoom actual: " + zoom);
+			console.log(newRadius);
+			/*if (zoom < 14) {
+				newRadius = 6;
+			}
+			else if(zoom === 14){
+				newRadius = 8;
+			}
+			else if(zoom > 14){
+				newRadius = 10;
+			}
+			estacionesLayer.eachLayer(function(e){
+				e.setStyle({
+					radius: newRadius
+				});
+				
+			});*/
+		}
 
 		var geojsonMarkerOptions2 = {
 			radius: 30,
@@ -221,7 +250,7 @@
 					$(".open-side").css("display", "none");
 					$(".open-transport").css("display", "none");
 					estacionesGeo.setStyle({
-						radius: 10,
+						radius: 6,
 						fillColor: "#74BDB6",
 						color: "#fff",
 						stroke: "#fff",
@@ -324,6 +353,10 @@
 			sidebarLeft.close();
 		});
 
+		map.on('zoomend', function(e) {
+			newZoom = map.getZoom();
+			setZoom(newZoom);
+		});
 		
 	};
 	
