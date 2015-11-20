@@ -203,6 +203,7 @@ ul.sidebar-tabs{
 .sidebar {
 	@include box-shadow(0 0 0 transparent);
 	border-radius: 0;
+	width: 320px;
 }
 .sidebar-tabs{
 	li{
