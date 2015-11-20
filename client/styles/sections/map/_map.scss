@@ -201,7 +201,7 @@ ul.sidebar-tabs{
 	}
 }
 .sidebar {
-	box-shadow:none;
+	@include box-shadow(0 0 0 transparent);
 	border-radius: 0;
 }
 .sidebar-tabs{
@@ -224,23 +224,28 @@ ul.sidebar-tabs{
 .sidebar-left .sidebar-content {
 	left: 0;
 	right: 40px;
-	box-shadow: none;
+	@include box-shadow(0 0 0 transparent);
+}
+.sidebar.leaflet-touch{
+	border: 0;
 }
 @media (min-width: 768px){
 	.sidebar{
 	  top:60px;
 	  overflow: hidden;
+	  width: 560px;
+	}
+	.sidebar-pane{
+		width: 520px;
 	}
 	.select-city{
 		top: 60px;
 		right: -200px;
 	}
+	.sidebar-left ~ .sidebar-map .leaflet-left {
+		left: 570px;
+	}
 }
 @media (min-width: 1200px){
-	.sidebar {
-		width: 410px;
-	}
-	.sidebar-left ~ .sidebar-map .leaflet-left {
-		left: 420px;
-	}
+
 }
