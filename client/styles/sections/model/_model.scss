@@ -40,6 +40,15 @@ section.model{
 		}
 	}
 }
+figure{
+	img{
+		width: 100%;
+	}
+	figcaption{
+		line-height: 0;
+		color: $color-subtitle;
+	}
+}
 @media (min-width: 768px){
 	section.model{
 		.intro-model{
@@ -55,6 +64,11 @@ section.model{
 					}
 				}
 			}
+		}
+	}
+	figure{
+		img{
+			width: 80%;
 		}
 	}
 }
