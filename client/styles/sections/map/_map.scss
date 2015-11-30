@@ -12,6 +12,37 @@
 	top: 0;
 	width: 100%;
 }
+.modal-dialog {
+	margin: 80px auto;
+}
+.modal-body{
+	h4{
+		margin-top: 0;
+	}
+	.fa.fa-map-marker,
+	.fa.fa-train{
+		color: $color-title;
+		vertical-align: middle;
+		margin-right: 10px;
+	}
+	.fa.fa-map-marker{
+		&:before{
+			font-size: 40px;
+		}
+	}
+	.fa.fa-train{
+		&:before{
+			font-size: 30px;
+		}
+	}
+}
+.modal-footer{
+	button,
+	button:hover{
+		background-color: $color-title;
+		border-color: $color-title;
+	}
+}
 .sidebar{
   top:125px;
   overflow: hidden;
@@ -63,7 +94,6 @@ ul.sidebar-tabs{
 			}
 			.fa-map-marker,
 			a.open-transport{
-				display: none;
 				padding: 10px 11.5px;
 			}
 			&.active>a,
@@ -231,6 +261,9 @@ ul.sidebar-tabs{
 	border: 0;
 }
 @media (min-width: 768px){
+	.modal-dialog {
+		width: 500px;
+	}
 	#poblacion > div > div:nth-child(1){
 		padding-right: 0;
 	}

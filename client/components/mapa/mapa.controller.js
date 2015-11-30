@@ -1,7 +1,11 @@
 (function(){
 	'use strict';
 	
-	var MapaController = function($timeout, $scope, $window){
+	var MapaController = function($timeout, $scope, $window, $uibModal){
+		var modalTimer = sessionStorage.getItem('modalTimer');
+		if(modalTimer !== 'true'){
+			Modal();
+		}
 		var windowSize = $(window).innerWidth();
 		var map = false, newZoom, newRadius = 6, currentZoom, previousZoom, setZoom;
 		var sidebarLeft = false;
@@ -34,7 +38,7 @@
 		};
 		
 		function setNewZoom(zoom){
-			if (zoom === 12) {
+			if (zoom <= 12) {
 				newRadius = 0;
 			}
 			else if (zoom < 14) {
@@ -77,10 +81,20 @@
 		if(windowSize <= 768){
 			setZoom = 11;
 		}
-		console.log(setZoom);
+
 		map = L.mapbox.map('map-box', 'caarloshugo1.h9bggm26',{scrollWheelZoom:true}).setView([19.432711775616433, -99.13325428962708], setZoom);
 		
 		loadCity(estaciones_zmvm, lineas_zmvm, cdmx);
+		
+		function Modal(){
+			return $timeout(function(){
+				sessionStorage.setItem('modalTimer', 'true');
+				$uibModal.open({
+					controller: 'ModalController',
+					templateUrl: './components/mapa/modal/modal.html'
+				});
+			}, 1500);
+		}
 		
 		//Add Sidebar
 		sidebarLeft = L.control.sidebar('sidebar-left').addTo(map);
@@ -245,8 +259,6 @@
 				/*styles*/
 				layer.on('click', function(e) {
 					$(".select-city").removeClass("show");
-					$(".open-side").css("display", "none");
-					$(".open-transport").css("display", "none");
 					estacionesGeo.setStyle({
 						radius: newRadius,
 						fillColor: "#009688",
@@ -370,7 +382,7 @@
 		
 	};
 	
-	MapaController.$inject = ['$timeout', '$scope', '$window'];
+	MapaController.$inject = ['$timeout', '$scope', '$window', '$uibModal'];
 	
 	angular.module('mapa', [])
 	.controller('MapaController', MapaController);

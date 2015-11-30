@@ -15,7 +15,9 @@
 		'main',
 		'menu.directive',
 		'mapa',
-		'modelo'
+		'modal.controller',
+		'modelo',
+		'ui.bootstrap'
 		]
 	)
 	.run([
