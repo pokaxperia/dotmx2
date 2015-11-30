@@ -2,7 +2,7 @@ article.card{
 	@include transition(all 0.25s linear);
 	background-color:#ffffff;
 	border-radius: 5px;
-	border: 1px solid rgba($color-title, 0.125);
+	border: 1px solid rgba($color-title, 0.5);
 	height: 160px;
 	margin-bottom: 20px;
 	position: relative;
@@ -20,7 +20,7 @@ article.card{
 			font-weight:400;
 			left: 0;
 			margin: 0;
-			padding: 15px;
+			padding: 0;
 			position: absolute;
 			top: 50%;
 			width: 100%;
@@ -85,7 +85,7 @@ article.card-steps{
 	@include transition(all 0.25s linear);
 	background-color:#ffffff;
 	border-radius: 5px;
-	border: 1px solid rgba($color-title, 0.125);
+	border: 1px solid rgba($color-title, 0.5);
 	height: 160px;
 	margin-bottom: 20px;
 	position: relative;
@@ -104,7 +104,7 @@ article.card-steps{
 			font-size: 20px;
 			font-weight: 400;
 			margin: 0;
-			padding: 15px 0;
+			padding: 0;
 			width: 100%;
 			padding-bottom: 0;
 		}
@@ -125,12 +125,15 @@ article.card-steps{
 			}
 		}
 		small{
+			bottom: 50px;
 			color: $color-subtitle;
 			font-weight: 400;
+			left: 0;
+			position: absolute;
+			right: 0;
 		}
 	}
 	.card-action{
-		background-color: #fff;
 		border-top: 1px solid rgba($color-title,0.25);
 		bottom: 0;
 		cursor: pointer;
@@ -175,15 +178,27 @@ article.card-steps{
 		padding-bottom: 30px;
 	}
 }
-card-steps{
-	>div:nth-child(odd){
+card-steps,
+card-normativos,
+card-economicos{
+	>div:nth-child(4n+1){
 		article.card-steps{
 			border-left: 5px solid #74BDB6;
 		}
 	}
-	>div:nth-child(even){
+	>div:nth-child(4n+2){
+		article.card-steps{
+			border-left: 5px solid $color-title;
+		}
+	}
+	>div:nth-child(4n+3){
 		article.card-steps{
 			border-left: 5px solid $color-subtitle;
+		}
+	}
+	>div:nth-child(4n+4){
+		article.card-steps{
+			border-left: 5px solid #009688;
 		}
 	}
 }
