@@ -145,22 +145,22 @@
   }
 }
 .tools-b{
-  background: url('../images/files.jpg');
+  background: url('../images/tools.jpg') no-repeat;
 }
 .guide-b{
-  background: url('../images/files.jpg');
+  background: url('../images/guide.jpg') no-repeat;
 }
 .strategies-b{
-  background: url('../images/files.jpg');
+  background: url('../images/files.jpg') no-repeat;
 }
 .model-b{
-  background: url('../images/model_b.jpg');
+  background: url('../images/model_b.jpg') no-repeat;
 }
 .map-b{
-  background: url('../images/files.jpg');
+  background: url('../images/map.jpg') no-repeat;
 }
 .files-b{
-  background: url('../images/files.jpg');
+  background: url('../images/files.jpg') no-repeat;
 }
 .guide-b,
 .strategies-b,
@@ -168,7 +168,7 @@
 .map-b,
 .files-b,
 .tools-b{
-  @include background-size(100% 200%);
+  @include background-size(cover);
   background-position: 50% 50%;
   @include transition(all 0.25s ease-in-out);
 }
@@ -207,13 +207,18 @@
           z-index: 10;
         }
       }
-      &:hover{
-        @include background-size(120% 120%);
-        span{
-          background-color: rgba(0,0,0,0.4);
-        }
+      span{
+        background-color: rgba(0,0,0,0.6);
       }
     }
+  }
+  .guide-b,
+  .strategies-b,
+  .model-b,
+  .map-b,
+  .files-b,
+  .tools-b{
+    @include background-size(cover);
   }
 }
 @media (min-width: 992px){
@@ -232,6 +237,9 @@
     article{
       &:hover{
         @include background-size(120% 140%);
+        span{
+          background-color: rgba(0,0,0,0.4);
+        }
       }
     }
   }
