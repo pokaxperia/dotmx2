@@ -190,12 +190,12 @@ ul.sidebar-tabs{
 		margin-top: 0;
 	}
 	#listdata{
-		padding-left: 20px;
+		padding-left: 10px;
 		list-style: none;
 		>li{
 			font-size: 14px;
 			span{
-				font-weight: 300;
+				font-weight: 500;
 			}
 		}
 	}
@@ -231,20 +231,26 @@ ul.sidebar-tabs{
 	border: 0;
 }
 @media (min-width: 768px){
+	#poblacion > div > div:nth-child(1){
+		padding-right: 0;
+	}
+	#poblacion > div > div:nth-child(2){
+		padding-left: 0;
+	}
 	.sidebar{
 	  top:60px;
 	  overflow: hidden;
-	  width: 560px;
+	  width: 500px;
 	}
 	.sidebar-pane{
-		width: 520px;
+		width: 490px;
 	}
 	.select-city{
 		top: 60px;
 		right: -200px;
 	}
 	.sidebar-left ~ .sidebar-map .leaflet-left {
-		left: 570px;
+		left: 550px;
 	}
 }
 @media (min-width: 1200px){
