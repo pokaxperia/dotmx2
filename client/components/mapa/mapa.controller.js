@@ -1,8 +1,9 @@
 (function(){
 	'use strict';
 	
-	var MapaController = function($timeout, $scope){
-		var map = false, newZoom, newRadius, currentZoom, previousZoom;
+	var MapaController = function($timeout, $scope, $window){
+		var windowSize = $(window).innerWidth();
+		var map = false, newZoom, newRadius = 6, currentZoom, previousZoom, setZoom;
 		var sidebarLeft = false;
 		var sidebarRight = false;
 		var agencies = new Array();
@@ -22,43 +23,34 @@
 		]
 
 		var geojsonMarkerOptions = {
-			radius: 6,
-			fillColor: "#74BDB6",
+			radius: newRadius,
+			fillColor: "#009688",
 			color: "#fff",
 			stroke: "#fff",
 			weight: 2,
-			dashArray: '2',
+			dashArray: 0,
 			opacity: 1,
 			fillOpacity: 1
 		};
 		
-		function setZoom(zoom){
-			previousZoom = currentZoom;
-			currentZoom = zoom;
-
-			previousZoom <= currentZoom ? newRadius = currentZoom - 5 : newRadius = currentZoom - 6;
-			estacionesLayer.eachLayer(function(e){
-				e.setStyle({
-					radius: newRadius
-				});
-			});
-			console.log("Zoom actual: " + zoom);
-			console.log(newRadius);
-			/*if (zoom < 14) {
+		function setNewZoom(zoom){
+			if (zoom === 12) {
+				newRadius = 0;
+			}
+			else if (zoom < 14) {
 				newRadius = 6;
 			}
 			else if(zoom === 14){
 				newRadius = 8;
 			}
 			else if(zoom > 14){
-				newRadius = 10;
+				newRadius = 9;
 			}
 			estacionesLayer.eachLayer(function(e){
 				e.setStyle({
 					radius: newRadius
 				});
-				
-			});*/
+			});
 		}
 
 		var geojsonMarkerOptions2 = {
@@ -73,14 +65,20 @@
 		};
 		
 		var lineStyle = {
-			"color": "#ff7800",
+			"color": "#F57C00",
 			"weight": 5,
 			"opacity": 0.65
 		};
 		
 		// Load tiles and get accessToken
 		L.mapbox.accessToken = 'pk.eyJ1IjoiY2Fhcmxvc2h1Z28xIiwiYSI6IklmZGNsNmMifQ.JJksWU3hBP-Vd3S9WtjFsA';
-		map = L.mapbox.map('map-box', 'caarloshugo1.h9bggm26',{scrollWheelZoom:true}).setView([19.432711775616433, -99.13325428962708], 13);
+		setZoom = 13;
+
+		if(windowSize <= 768){
+			setZoom = 11;
+		}
+		console.log(setZoom);
+		map = L.mapbox.map('map-box', 'caarloshugo1.h9bggm26',{scrollWheelZoom:true}).setView([19.432711775616433, -99.13325428962708], setZoom);
 		
 		loadCity(estaciones_zmvm, lineas_zmvm, cdmx);
 		
@@ -91,7 +89,6 @@
 		function loadCity(estaciones, lineas, ciudad){
 			$timeout(function(){
 				print(estaciones, lineas, ciudad);
-				$("#myTabs a:last").tab('show');
 			}, 1000);
 			
 		}
@@ -251,22 +248,22 @@
 					$(".open-side").css("display", "none");
 					$(".open-transport").css("display", "none");
 					estacionesGeo.setStyle({
-						radius: 6,
-						fillColor: "#74BDB6",
+						radius: newRadius,
+						fillColor: "#009688",
 						color: "#fff",
-						stroke: "#fff",
-						weight: 2,
-						dashArray: '2',
-						opacity: 1,
-						fillOpacity: 0.8
+						weight: 1,
+						dashArray: 0,
+						opacity: 0.75,
+						fillOpacity: 0.5
 					});
 					
 					this.setStyle({
-						color: '#455A64',
+						radius: newRadius,
+						color: '#4C5667',
 						weight: 3,
 						opacity: 0.6,
 						fillOpacity: 1,
-						fillColor: '#455A64'
+						fillColor: '#4C5667'
 					});
 						
 					circleLayer.clearLayers();
@@ -352,16 +349,28 @@
 		map.on('click', function(e) {
 			circleLayer.clearLayers();
 			sidebarLeft.close();
+			estacionesLayer.eachLayer(function(e){
+				e.setStyle({
+					radius: newRadius,
+					fillColor: "#009688",
+					color: "#fff",
+					stroke: "#fff",
+					weight: 2,
+					dashArray: 0,
+					opacity: 1,
+					fillOpacity: 1
+				});
+			});
 		});
 
 		map.on('zoomend', function(e) {
 			newZoom = map.getZoom();
-			setZoom(newZoom);
+			setNewZoom(newZoom);
 		});
 		
 	};
 	
-	MapaController.$inject = ['$timeout', '$scope'];
+	MapaController.$inject = ['$timeout', '$scope', '$window'];
 	
 	angular.module('mapa', [])
 	.controller('MapaController', MapaController);
