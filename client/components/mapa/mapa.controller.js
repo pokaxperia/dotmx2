@@ -208,8 +208,10 @@
 						});
 					}
 					else{
-						$("#focus-agency").append('<h4 class="title-right">Medios de Transporte</h4>');
-						$("#focus-agency").append('<li><a>Nombres no definidos</a></li>');
+							$("#focus-agency").append('<h4 class="title-right">Medios de Transporte</h4>');
+							$("#focus-agency").append('<li><a id="' + agencies + '">' + agencies +'</a></li>');
+						//$("#focus-agency").append('<h4 class="title-right">Medios de Transporte</h4>');
+						//$("#focus-agency").append('<li><a>Nombres no definidos</a></li>');
 					}
 			}
 			else {
@@ -255,6 +257,11 @@
 				if(feature.properties.Agencia !== "" && feature.properties.Agencia !== undefined && agencies.indexOf(feature.properties.Agencia) == -1) {
 					agencies.push(feature.properties.Agencia);
 				}
+				if(feature.Agencia !== "" && feature.Agencia !== undefined && agencies.indexOf(feature.Agencia) == -1) {
+					agencies.push(feature.Agencia);
+				}
+				
+
 				
 				/*styles*/
 				layer.on('click', function(e) {
@@ -288,7 +295,8 @@
 					} else {
 						$("#info-Name").html(feature.properties.Nombre);
 					}
-					
+
+					$("#info-GMU").html(feature.properties.GMU);
 					$("#info-Agencia").html(feature.properties.Agencia);
 					$("#info-Escuelas").html(feature.properties.Escuelas);
 					$("#info-AsistMed").html(feature.properties.AsistMed);
@@ -300,14 +308,15 @@
 					$("#info-PerRemPrim").html(feature.properties.PerRemPrim);
 					$("#info-PerRemSecu").html(feature.properties.PerRemSecu);
 					$("#info-PerRemTerc").html(feature.properties.PerRemTerc);
-					$("#info-UEprim").html(feature.properties.UEprim);
+					$("#info-UEPrim").html(feature.properties.UEPrim);
 					$("#info-UEsecu").html(feature.properties.UEsecu);
 					$("#info-UEterc").html(feature.properties.UEterc);
 					$("#info-PobTot").html(feature.properties.PobTot);
 					$("#info-VivTot").html(feature.properties.VivTot);
-					$("#info-VivDeshab").html(feature.properties.VivDeshab);
-					$("#info-VivConAuto").html(feature.properties.VivConAuto);
-					$("#info-VivTodServ").html(feature.properties.VivTodServ);
+					$("#info-PorcVTdSrv").html(feature.properties.PorcVTdSrv);
+					$("#info-PorcVDesha").html(feature.properties.PorcVDesha);
+					$("#info-PorcVCnAut").html(feature.properties.PorcVCnAut);;
+					$("#info-NSE").html(feature.properties.NSE);
 					$("#info-PobOcupada").html(feature.properties.PobOcupada);
 					$("#info-PobDesocup").html(feature.properties.PobDesocup);
 					$("#info-DensPobAvg").html(feature.properties.DensPob);
@@ -328,29 +337,39 @@
 					var infoPerRemPrim = $("#info-PerRemPrim").text();
 					var infoPerRemSecu = $("#info-PerRemSecu").text();
 					var infoPerRemTerc = $("#info-PerRemTerc").text();
-					var infoUEprim = $("#info-UEprim").text();
+					var infoUEPrim = $("#info-UEPrim").text();
 					var infoUEsecu = $("#info-UEsecu").text();
 					var infoUEterc = $("#info-UEterc").text();
 					var infoPobTot = $("#info-PobTot").text();
 					var infoVivTot = $("#info-VivTot").text();
-					var infoVivDeshab = $("#info-VivDeshab").text();
-					var infoVivConAuto = $("#info-VivConAuto").text();
-					var infoVivTodServ = $("#info-VivTodServ").text();
 					var infoPobOcupada = $("#info-PobOcupada").text();
 					var infoPobDesocup = $("#info-PobDesocup").text();
 					var infoDensPobAvg = $("#info-DensPobAvg").text();
 
+					if(feature.properties.GMU != undefined) {
+					 $("#info-GMU").html(feature.properties.GMU);
+					}
 					$("#info-PerRemPrim").text(numeral(infoPerRemPrim).format('0,0'));
 					$("#info-PerRemSecu").text(numeral(infoPerRemSecu).format('0,0'));
 					$("#info-PerRemTerc").text(numeral(infoPerRemTerc).format('0,0'));
-					$("#info-UEprim").text(numeral(infoUEprim).format('0,0'));
+					$("#info-UEPrim").text(numeral(infoUEPrim).format('0,0'));
 					$("#info-UEsecu").text(numeral(infoUEsecu).format('0,0'));
 					$("#info-UEterc").text(numeral(infoUEterc).format('0,0'));
 					$("#info-PobTot").text(numeral(infoPobTot).format('0,0'));
 					$("#info-VivTot").text(numeral(infoVivTot).format('0,0'));
-					$("#info-VivDeshab").text(numeral(infoVivDeshab).format('0,0'));
-					$("#info-VivConAuto").text(numeral(infoVivConAuto).format('0,0'));
-					$("#info-VivTodServ").text(numeral(infoVivTodServ).format('0,0'));
+					if(feature.properties.PorcVTdSrv != undefined) {
+					 $("#info-PorcVTdSrv").html(numeral(feature.properties.PorcVTdSrv).format('0%'));
+					}
+					if(feature.properties.PorcVDesha != undefined) {
+					 $("#info-PorcVDesha").html(numeral(feature.properties.PorcVDesha).format('0%')); 
+					}
+
+					if(feature.properties.PorcVCnAut != undefined) {
+					 $("#info-PorcVCnAut").html(numeral(feature.properties.PorcVCnAut).format('0%'));
+					}
+					if(feature.properties.NSE != undefined) {
+					 $("#info-NSE").html(feature.properties.NSE);
+					}
 					$("#info-PobOcupada").text(numeral(infoPobOcupada).format('0,0'));
 					$("#info-PobDesocup").text(numeral(infoPobDesocup).format('0,0'));
 					$("#info-DensPobAvg").text(numeral(infoDensPobAvg).format('0,0'));
