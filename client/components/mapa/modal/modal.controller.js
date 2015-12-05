@@ -5,29 +5,18 @@
 	'use strict';
 
 	var ModalController = function($uibModalInstance, $uibModal, $scope){
-		init();
-
-		function init(){
-
-		}
 
 		$scope.saveArea = function () {
-
 			$uibModalInstance.close();
 		};
 
 		$scope.updateArea = function () {
-
 			$uibModalInstance.close();
 		};
 
 		$scope.notYet = function () {
 			$uibModalInstance.close('notYet');
 		};
-
-
-
-
 
 	};
 
