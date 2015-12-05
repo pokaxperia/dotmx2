@@ -210,8 +210,6 @@
 					else{
 							$("#focus-agency").append('<h4 class="title-right">Medios de Transporte</h4>');
 							$("#focus-agency").append('<li><a id="' + agencies + '">' + agencies +'</a></li>');
-						//$("#focus-agency").append('<h4 class="title-right">Medios de Transporte</h4>');
-						//$("#focus-agency").append('<li><a>Nombres no definidos</a></li>');
 					}
 			}
 			else {
@@ -296,31 +294,41 @@
 						$("#info-Name").html(feature.properties.Nombre);
 					}
 
-					$("#info-GMU").html(feature.properties.GMU);
 					$("#info-Agencia").html(feature.properties.Agencia);
+					// Poblacion
+					$("#info-PobTot").html(feature.properties.PobTot);
+					$("#info-PorcPobOcu").html(feature.properties.PorcPobOcu);
+					$("#info-PorcPobDes").html(feature.properties.PorcPobDes);
+					$("#info-GMU").html(feature.properties.GMU);
+					$("#info-NSE").html(feature.properties.NSE);
+					$("#info-DensPobAvg").html(feature.properties.DensPob);
+					
+					// Vivienda
+					$("#info-VivTot").html(feature.properties.VivTot);
+					$("#info-PorcVTdSrv").html(feature.properties.PorcVTdSrv);
+					$("#info-PorcVDesha").html(feature.properties.PorcVDesha);
+					$("#info-PorcVCnAut").html(feature.properties.PorcVCnAut);
+					
+					// Unidades economicas
+					$("#info-UETot").html(feature.properties.UETot);
+					$("#info-PorcUEPrim").html(feature.properties.PorcUEPrim);
+					$("#info-PorcUESecu").html(feature.properties.PorcUESecu);
+					$("#info-PorcUETerc").html(feature.properties.PorcUETerc);
+					
+					// Personal remunerado
+					$("#info-PerRemTot").html(feature.properties.PerRemTot);
+					$("#info-PorcPRprim").html(feature.properties.PorcPRprim);
+					$("#info-PorcPRsecu").html(feature.properties.PorcPRsecu);
+					$("#info-PorcPRterc").html(feature.properties.PorcPRterc);
+					
+					// Equipamiento
 					$("#info-Escuelas").html(feature.properties.Escuelas);
-					$("#info-AsistMed").html(feature.properties.AsistMed);
-					$("#info-CComerc").html(feature.properties.CComerc);
 					$("#info-Mercados").html(feature.properties.Mercados);
 					$("#info-Templos").html(feature.properties.Templos);
 					$("#info-Plazas").html(feature.properties.Plazas);
 					$("#info-Deport").html(feature.properties.Deport);
-					$("#info-PerRemPrim").html(feature.properties.PerRemPrim);
-					$("#info-PerRemSecu").html(feature.properties.PerRemSecu);
-					$("#info-PerRemTerc").html(feature.properties.PerRemTerc);
-					$("#info-UEPrim").html(feature.properties.UEPrim);
-					$("#info-UEsecu").html(feature.properties.UEsecu);
-					$("#info-UEterc").html(feature.properties.UEterc);
-					$("#info-PobTot").html(feature.properties.PobTot);
-					$("#info-VivTot").html(feature.properties.VivTot);
-					$("#info-PorcVTdSrv").html(feature.properties.PorcVTdSrv);
-					$("#info-PorcVDesha").html(feature.properties.PorcVDesha);
-					$("#info-PorcVCnAut").html(feature.properties.PorcVCnAut);;
-					$("#info-NSE").html(feature.properties.NSE);
-					$("#info-PobOcupada").html(feature.properties.PobOcupada);
-					$("#info-PobDesocup").html(feature.properties.PobDesocup);
-					$("#info-DensPobAvg").html(feature.properties.DensPob);
-					
+					$("#info-AsistMed").html(feature.properties.AsistMed);
+
 					circleLayer.addLayer(circle);
 					circleLayer.addTo(map);
 					estacionesGeo.bringToFront();
@@ -334,45 +342,42 @@
 					sidebarLeft.open("poblacion");
 					
 					// Numeral
-					var infoPerRemPrim = $("#info-PerRemPrim").text();
-					var infoPerRemSecu = $("#info-PerRemSecu").text();
-					var infoPerRemTerc = $("#info-PerRemTerc").text();
-					var infoUEPrim = $("#info-UEPrim").text();
-					var infoUEsecu = $("#info-UEsecu").text();
-					var infoUEterc = $("#info-UEterc").text();
-					var infoPobTot = $("#info-PobTot").text();
-					var infoVivTot = $("#info-VivTot").text();
-					var infoPobOcupada = $("#info-PobOcupada").text();
-					var infoPobDesocup = $("#info-PobDesocup").text();
-					var infoDensPobAvg = $("#info-DensPobAvg").text();
-
+					
+					// Poblacion
+					$("#info-PobTot").html(numeral(feature.properties.PobTot).format('0,0'));
+					$("#info-PorcPobOcu").html(numeral(feature.properties.PorcPobOcu).format('0%'));
+					$("#info-PorcPobDes").html(numeral(feature.properties.PorcPobDes).format('0%'));
 					if(feature.properties.GMU != undefined) {
 					 $("#info-GMU").html(feature.properties.GMU);
 					}
-					$("#info-PerRemPrim").text(numeral(infoPerRemPrim).format('0,0'));
-					$("#info-PerRemSecu").text(numeral(infoPerRemSecu).format('0,0'));
-					$("#info-PerRemTerc").text(numeral(infoPerRemTerc).format('0,0'));
-					$("#info-UEPrim").text(numeral(infoUEPrim).format('0,0'));
-					$("#info-UEsecu").text(numeral(infoUEsecu).format('0,0'));
-					$("#info-UEterc").text(numeral(infoUEterc).format('0,0'));
-					$("#info-PobTot").text(numeral(infoPobTot).format('0,0'));
-					$("#info-VivTot").text(numeral(infoVivTot).format('0,0'));
+					if(feature.properties.NSE != undefined) {
+					 $("#info-NSE").html(feature.properties.NSE);
+					}
+					$("#info-DensPobAvg").html(numeral(feature.properties.DensPob).format('0,0'));
+
+					// Vivienda
+					$("#info-VivTot").html(numeral(feature.properties.VivTot).format('0,0'));
 					if(feature.properties.PorcVTdSrv != undefined) {
 					 $("#info-PorcVTdSrv").html(numeral(feature.properties.PorcVTdSrv).format('0%'));
 					}
 					if(feature.properties.PorcVDesha != undefined) {
 					 $("#info-PorcVDesha").html(numeral(feature.properties.PorcVDesha).format('0%')); 
 					}
-
 					if(feature.properties.PorcVCnAut != undefined) {
 					 $("#info-PorcVCnAut").html(numeral(feature.properties.PorcVCnAut).format('0%'));
 					}
-					if(feature.properties.NSE != undefined) {
-					 $("#info-NSE").html(feature.properties.NSE);
-					}
-					$("#info-PobOcupada").text(numeral(infoPobOcupada).format('0,0'));
-					$("#info-PobDesocup").text(numeral(infoPobDesocup).format('0,0'));
-					$("#info-DensPobAvg").text(numeral(infoDensPobAvg).format('0,0'));
+
+					// Unidades economicas
+					$("#info-UETot").text(numeral(feature.properties.UETot).format('0,0'));
+					$("#info-PorcUEPrim").html(numeral(feature.properties.PorcUEPrim).format('0%'));
+					$("#info-PorcUESecu").html(numeral(feature.properties.PorcUESecu).format('0%'));
+					$("#info-PorcUETerc").html(numeral(feature.properties.PorcUETerc).format('0%'));
+
+					// Personal remunerado
+					$("#info-PerRemTot").html(numeral(feature.properties.PerRemTot).format('0,0'));
+					$("#info-PorcPRprim").html(numeral(feature.properties.PorcPRprim).format('0%'));
+					$("#info-PorcPRsecu").html(numeral(feature.properties.PorcPRsecu).format('0%'));
+					$("#info-PorcPRterc").html(numeral(feature.properties.PorcPRterc).format('0%'));
 				});
 			}
 		}
