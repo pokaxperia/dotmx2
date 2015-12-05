@@ -19,12 +19,12 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Montserrat:400,700' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Lato:400,100,300' rel='stylesheet' type='text/css'>
-	<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Quicksand' type='text/css'>
 
 	<!-- build:css css/styles.css -->
 	<!-- bower:css -->
-	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
-	<link rel="stylesheet" href="bower_components/leaflet-sidebar/src/L.Control.Sidebar.css" />
+	<link rel='stylesheet' href='bower_components/bootstrap/dist/css/bootstrap.css' />
+	<link rel='stylesheet' href='bower_components/mapbox.js/mapbox.css' />
+	<link rel='stylesheet' href='bower_components/leaflet-sidebar/src/L.Control.Sidebar.css' />
 	<!-- endbower -->
 	<!-- inject:css -->
 	<link rel="stylesheet" href="styles/styles.css">
@@ -91,21 +91,23 @@
 	<script src="components/instrumentos/card.directive.js"></script>
 	<script src="components/instrumentos/economicos.directive.js"></script>
 	<script src="components/instrumentos/instrumentos.controller.js"></script>
+	<script src="components/instrumentos/instrumentos.factory.js"></script>
 	<script src="components/instrumentos/normativos.directive.js"></script>
 	<script src="components/main/main.controller.js"></script>
 	<script src="components/main/menu.directive.js"></script>
 	<script src="components/mapa/mapa.controller.js"></script>
-	<script src="components/mapa/modal/modal.controller.js"></script>
+	<script src="components/modal/ui-bootstrap-custom-0.14.3.js"></script>
+	<script src="components/modal/ui-bootstrap-custom-tpls-0.14.3.js"></script>
 	<script src="components/modelo/modelo.controller.js"></script>
-	<script src="components/geojson/estaciones/CentroidesEstacionesPueblaGEO.geojson.js"></script>
-	<script src="components/geojson/estaciones/EstacionesInfoAgsCentroidesGEO.geojson.js"></script>
-	<script src="components/geojson/estaciones/EstacionesInfoChihuahuaCentroidesGEO.geojson.js"></script>
-	<script src="components/geojson/estaciones/EstacionesInfoGdlGeoCentroides.geojson.js"></script>
-	<script src="components/geojson/estaciones/EstacionesInfoJuarezCentroidesGEO.geojson.js"></script>
-	<script src="components/geojson/estaciones/EstacionesInfoLeonCentroidesGEO.geojson.js"></script>
-	<script src="components/geojson/estaciones/EstacionesInfoMtyGeoCentroides.geojson.js"></script>
-	<script src="components/geojson/estaciones/EstacionesInfoPachucaGeoCentroides.geojson.js"></script>
-	<script src="components/geojson/estaciones/EstacionesInfo_ZMVM_CentroidGEO.geojson.js"></script>
+	<script src="components/geojson/estaciones/Aguascalientes_Estaciones.geojson.js"></script>
+	<script src="components/geojson/estaciones/Chihuahua_Estaciones.geojson.js"></script>
+	<script src="components/geojson/estaciones/Guadalajara_Estaciones.geojson.js"></script>
+	<script src="components/geojson/estaciones/Guanajuato_Estaciones.geojson.js"></script>
+	<script src="components/geojson/estaciones/Juarez_Estaciones.geojson.js"></script>
+	<script src="components/geojson/estaciones/Monterrey_Estaciones.geojson.js"></script>
+	<script src="components/geojson/estaciones/Pachuca_Estaciones.geojson.js"></script>
+	<script src="components/geojson/estaciones/Puebla_Estaciones.geojson.js"></script>
+	<script src="components/geojson/estaciones/ZMVM_Estaciones.geojson.js"></script>
 	<script src="components/geojson/lineas/TrazoChihuahuaGEO.geojson.js"></script>
 	<script src="components/geojson/lineas/TrazoLineaPachucaGEO.geojson.js"></script>
 	<script src="components/geojson/lineas/TrazoLineasAGS_GEO.geojson.js"></script>
@@ -115,6 +117,7 @@
 	<script src="components/geojson/lineas/TrazoTpteMonterrey.geojson.js"></script>
 	<script src="components/geojson/lineas/TrazoTroncalesLeonGEO.geojson.js"></script>
 	<script src="components/geojson/lineas/TrazosTpteZMVM.geojson.js"></script>
+	<script src="components/mapa/modal/modal.controller.js"></script>
 	<!-- endinject -->
 
 	<!-- inject:template:js -->
