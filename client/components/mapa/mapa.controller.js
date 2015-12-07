@@ -316,7 +316,7 @@
 					$("#info-PorcUETerc").html(feature.properties.PorcUETerc);
 					
 					// Personal remunerado
-					$("#info-PerRemTot").html(feature.properties.PerRemTot);
+					$("#info-PersRemTot").html(feature.properties.PersRemTot);
 					$("#info-PorcPRprim").html(feature.properties.PorcPRprim);
 					$("#info-PorcPRsecu").html(feature.properties.PorcPRsecu);
 					$("#info-PorcPRterc").html(feature.properties.PorcPRterc);
@@ -374,7 +374,7 @@
 					$("#info-PorcUETerc").html(numeral(feature.properties.PorcUETerc).format('0%'));
 
 					// Personal remunerado
-					$("#info-PerRemTot").html(numeral(feature.properties.PerRemTot).format('0,0'));
+					$("#info-PersRemTot").html(numeral(feature.properties.PersRemTot).format('0,0'));
 					$("#info-PorcPRprim").html(numeral(feature.properties.PorcPRprim).format('0%'));
 					$("#info-PorcPRsecu").html(numeral(feature.properties.PorcPRsecu).format('0%'));
 					$("#info-PorcPRterc").html(numeral(feature.properties.PorcPRterc).format('0%'));
