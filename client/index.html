@@ -32,18 +32,6 @@
 	<!-- endbuild -->
 	<link href='https://api.mapbox.com/mapbox.js/v2.2.3/mapbox.css' rel='stylesheet' />
 	<script src='https://api.mapbox.com/mapbox.js/v2.2.3/mapbox.js'></script>
-	<!-- build:js js/lib.js -->
-	<!-- bower:js -->
-	<script src="bower_components/jquery/dist/jquery.js"></script>
-	<script src="bower_components/angular/angular.js"></script>
-	<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-	<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-	<script src="bower_components/leaflet-sidebar/src/L.Control.Sidebar.js"></script>
-	<script src="bower_components/numeral/numeral.js"></script>
-	<script src="bower_components/ui-bootstrap/ui-bootstrap-custom-0.14.3.js"></script>
-	<script src="bower_components/ui-bootstrap/ui-bootstrap-custom-tpls-0.14.3.js"></script>
-	<!-- endbower -->
-	<!-- endbuild -->
 </head>
 <body ng-app="dotmx">
 	<!--[if lt IE 7]>
@@ -79,6 +67,19 @@
 	</nav>
 
 	<div ui-view autoscroll="true"></div>
+	
+	<!-- build:js js/lib.js -->
+	<!-- bower:js -->
+	<script src="bower_components/jquery/dist/jquery.js"></script>
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+	<script src="bower_components/mapbox.js/mapbox.js"></script>
+	<script src="bower_components/leaflet-sidebar/src/L.Control.Sidebar.js"></script>
+	<script src="bower_components/numeral/numeral.js"></script>
+	<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+	<!-- endbower -->
+	<!-- endbuild -->
+	
 	<!-- build:js js/app.js -->
 	<!-- inject:js -->
 	<script src="components/modernizr-custom.js"></script>
@@ -123,5 +124,15 @@
 	<!-- inject:template:js -->
 	<!-- endinject -->
 	<!-- endbuild -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-xxxxxxx-x', 'auto');
+  ga('send', 'pageview');
+
+</script>
 </body>
 </html>
