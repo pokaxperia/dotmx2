@@ -21,10 +21,10 @@
   "dependencies": {
     "angular": "1.4.7",
     "jquery": "~2.1.4",
-    "angular-ui-router": "~0.2.15",
     "bootstrap": "3.3.4",
     "mapbox.js": "~2.2.3",
     "leaflet-sidebar": "~0.1.8",
-    "numeral": "~1.5.3"
+    "numeral": "~1.5.3",
+    "angular-ui-router": "~0.2.15"
   }
 }
