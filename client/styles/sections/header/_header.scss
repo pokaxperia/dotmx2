@@ -23,6 +23,9 @@
 	font-size: 18px;
 	padding: 12px 15px;
 }
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus{
+	color: #ffffff;
+}
 @media(min-width: 768px){
 	.in{
 		@include transition(height 0.25s ease-in-out);
