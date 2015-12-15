@@ -2,48 +2,43 @@
 	'use strict';
 	
 	angular.module('routes', ['ui.router'])
-	.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',function($stateProvider, $urlRouterProvider,$locationProvider) {
+	.config(['$stateProvider', '$urlRouterProvider',function($stateProvider, $urlRouterProvider) {
 		$urlRouterProvider.otherwise('/');
 		$stateProvider
-			.state('main', {
+			.state('/', {
 				url: '/',
 				controller: 'MainController',
-				templateUrl: './components/main/main.html'
+				templateUrl: 'components/main/main.html'
 			})
 			.state('instrumentos', {
 				url: '/instrumentos',
 				controller: 'InstrumentosController',
-				templateUrl: './components/instrumentos/instrumentos.html'
+				templateUrl: 'components/instrumentos/instrumentos.html'
 			})
 			.state('guia', {
 				url: '/guia',
 				controller: 'GuiaController',
-				templateUrl: './components/guia/guia.html'
+				templateUrl: 'components/guia/guia.html'
 			})
 			.state('mapa', {
 				url: '/mapa',
 				controller: 'MapaController',
-				templateUrl: './components/mapa/mapa.html'
+				templateUrl: 'components/mapa/mapa.html'
 			})
 			.state('estrategias', {
 				url: '/estrategias',
 				controller: 'EstrategiasController',
-				templateUrl: './components/estrategias/estrategias.html'
+				templateUrl: 'components/estrategias/estrategias.html'
 			})
 			.state('modelo', {
 				url: '/modelo',
 				controller: 'ModeloController',
-				templateUrl: './components/modelo/modelo.html'
+				templateUrl: 'components/modelo/modelo.html'
 			})
 			.state('descargas', {
 				url: '/descargas',
-				templateUrl: './components/descargas/descargas.html'
+				templateUrl: 'components/descargas/descargas.html'
 			});
-		$locationProvider.html5Mode({
-			enabled: true,
-			requireBase: false
-		});
-		//$locationProvider.html5Mode(true);
 	}]);
 
 }());
