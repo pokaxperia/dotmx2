@@ -2,7 +2,7 @@
 	'use strict';
 	
 	angular.module('routes', ['ui.router'])
-	.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
+	.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',function($stateProvider, $urlRouterProvider,$locationProvider) {
 		$urlRouterProvider.otherwise('/');
 		$stateProvider
 			.state('main', {
@@ -39,6 +39,11 @@
 				url: '/descargas',
 				templateUrl: './components/descargas/descargas.html'
 			});
+		$locationProvider.html5Mode({
+			enabled: true,
+			requireBase: false
+		});
+		//$locationProvider.html5Mode(true);
 	}]);
 
 }());
