@@ -167,6 +167,21 @@ gulp.task('dev-server', function(){
 	});
 });
 
+/* Production Server */
+gulp.task('prod-server', function(){
+	log('Prod server running...');
+
+	browserSync.init({
+		logFileChanges: true,
+		logPrefix: "DotMx2 Project",
+		notify: true,
+		reloadDelay: 1500,
+		server: {
+			baseDir: 'build',
+		}
+	});
+});
+
 /* Watch files */
 gulp.task('watch', function(){
 	log('Watching files!');

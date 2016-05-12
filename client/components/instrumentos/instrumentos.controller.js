@@ -5,6 +5,10 @@
 		$scope.setData = function(iD){
 			$scope.template = './components/instrumentos/informacion/'+iD+'.html';
 		};
+		
+		$timeout = twttr.widgets.load(
+			document.getElementById('share-tools')
+		);
 	}
 	
 	InstrumentosController.$inject = ['$timeout', '$log','$scope'];
