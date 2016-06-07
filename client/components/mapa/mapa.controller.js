@@ -289,45 +289,45 @@
 
 					
 					if(ciudad=="puebla") {
-						$("#info-Name").html(feature.properties.Name);
+						$("#info-Name").empty().html(feature.properties.Name);
 					} else {
-						$("#info-Name").html(feature.properties.Nombre);
+						$("#info-Name").empty().html(feature.properties.Nombre);
 					}
 
-					$("#info-Agencia").html(feature.properties.Agencia);
+					$("#info-Agencia").empty().html(feature.properties.Agencia);
 					// Poblacion
-					$("#info-PobTot").html(feature.properties.PobTot);
-					$("#info-PorcPobOcu").html(feature.properties.PorcPobOcu);
-					$("#info-PorcPobDes").html(feature.properties.PorcPobDes);
-					$("#info-GMU").html(feature.properties.GMU);
-					$("#info-NSE").html(feature.properties.NSE);
-					$("#info-DensPobAvg").html(feature.properties.DensPob);
+					$("#info-PobTot").empty().html(feature.properties.PobTot);
+					$("#info-PorcPobOcu").empty().html(feature.properties.PorcPobOcu);
+					$("#info-PorcPobDes").empty().html(feature.properties.PorcPobDes);
+					$("#info-GMU").empty().html(feature.properties.GMU);
+					$("#info-NSE").empty().html(feature.properties.NSE);
+					$("#info-DensPobAvg").empty().html(feature.properties.DensPob);
 					
 					// Vivienda
-					$("#info-VivTot").html(feature.properties.VivTot);
-					$("#info-PorcVTdSrv").html(feature.properties.PorcVTdSrv);
-					$("#info-PorcVDesha").html(feature.properties.PorcVDesha);
-					$("#info-PorcVCnAut").html(feature.properties.PorcVCnAut);
+					$("#info-VivTot").empty().html(feature.properties.VivTot);
+					$("#info-PorcVTdSrv").empty().html(feature.properties.PorcVTdSrv);
+					$("#info-PorcVDesha").empty().html(feature.properties.PorcVDesha);
+					$("#info-PorcVCnAut").empty().html(feature.properties.PorcVCnAut);
 					
 					// Unidades economicas
-					$("#info-UETot").html(feature.properties.UETot);
-					$("#info-PorcUEPrim").html(feature.properties.PorcUEPrim);
-					$("#info-PorcUESecu").html(feature.properties.PorcUESecu);
-					$("#info-PorcUETerc").html(feature.properties.PorcUETerc);
+					$("#info-UETot").empty().html(feature.properties.UETot);
+					$("#info-PorcUEPrim").empty().html(feature.properties.PorcUEPrim);
+					$("#info-PorcUESecu").empty().html(feature.properties.PorcUESecu);
+					$("#info-PorcUETerc").empty().html(feature.properties.PorcUETerc);
 					
 					// Personal remunerado
-					$("#info-PersRemTot").html(feature.properties.PersRemTot);
-					$("#info-PorcPRprim").html(feature.properties.PorcPRprim);
-					$("#info-PorcPRsecu").html(feature.properties.PorcPRsecu);
-					$("#info-PorcPRterc").html(feature.properties.PorcPRterc);
+					$("#info-PersRemTot").empty().html(feature.properties.PersRemTot);
+					$("#info-PorcPRprim").empty().html(feature.properties.PorcPRprim);
+					$("#info-PorcPRsecu").empty().html(feature.properties.PorcPRsecu);
+					$("#info-PorcPRterc").empty().html(feature.properties.PorcPRterc);
 					
 					// Equipamiento
-					$("#info-Escuelas").html(feature.properties.Escuelas);
-					$("#info-Mercados").html(feature.properties.Mercados);
-					$("#info-Templos").html(feature.properties.Templos);
-					$("#info-Plazas").html(feature.properties.Plazas);
-					$("#info-Deport").html(feature.properties.Deport);
-					$("#info-AsistMed").html(feature.properties.AsistMed);
+					$("#info-Escuelas").empty().html(feature.properties.Escuelas);
+					$("#info-Mercados").empty().html(feature.properties.Mercados);
+					$("#info-Templos").empty().html(feature.properties.Templos);
+					$("#info-Plazas").empty().html(feature.properties.Plazas);
+					$("#info-Deport").empty().html(feature.properties.Deport);
+					$("#info-AsistMed").empty().html(feature.properties.AsistMed);
 
 					circleLayer.addLayer(circle);
 					circleLayer.addTo(map);
