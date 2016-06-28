@@ -30,10 +30,20 @@
 				controller: 'EstrategiasController',
 				templateUrl: './components/estrategias/estrategias.html'
 			})
-			.state('modelo', {
-				url: '/modelo',
-				controller: 'ModeloController',
-				templateUrl: './components/modelo/modelo.html'
+			.state('implementacion', {
+				url: '/implementacion',
+				controller: 'ImplementacionController',
+				templateUrl: './components/implementacion/implementacion.html'
+			})
+			.state('calculadora', {
+				url: '/calculadora',
+				controller: 'CalculadoraController',
+				templateUrl: './components/calculadora/calculadora.html'
+			})
+			.state('estimaciones', {
+				url: '/estimaciones',
+				controller: 'EstimacionesController',
+				templateUrl: './components/estimaciones/estimaciones.html'
 			})
 			.state('descargas', {
 				url: '/descargas',

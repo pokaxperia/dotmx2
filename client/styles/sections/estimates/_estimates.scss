@@ -1,0 +1,93 @@
+section.estimates{
+	height: 100%;
+	padding: 0px 0px 70px 0px;
+	position: relative;
+	z-index: 0;
+	background-color: #ffffff;
+	.intro-estimates{
+		background-position: 100% 60% !important;
+		background-repeat: no-repeat;
+		background-size: cover!important;
+		background: url('../images/model_b.jpg');
+		height: 400px;
+		padding: 0;
+		.container{
+			display: table;
+			height: 100%;
+			position: relative;
+			section.container-title{
+				display: table-cell;
+				height: 100%;
+				vertical-align: middle;
+				z-index: 5;
+				.title-section{
+					color: #ffffff;
+					font-size: 35px;
+					text-align: left;
+					margin-bottom: 0;
+				}
+				span{
+					color: #ffffff;
+					display: block;
+					font-size:20px;
+					font-weight: 200;
+					text-align: left;
+				}
+				>div:nth-child(1){
+					margin-bottom: 30px;
+				}
+			}
+		}
+	}
+}
+figure{
+	img{
+		width: 100%;
+	}
+	figcaption{
+		line-height: 0;
+		color: $color-subtitle;
+	}
+}
+@media (min-width: 768px){
+	section.estimates{
+		.intro-estimates{
+			>.container{
+				section.container-title{
+					.title-section{
+						font-size: 40px;
+						text-align: left;
+					}
+					span{
+						font-size: 22px;
+						text-align: left;
+					}
+				}
+			}
+		}
+	}
+	figure{
+		img{
+			width: 80%;
+		}
+	}
+}
+@media (min-width: 992px){
+	section.estimates{
+		.intro-estimates{
+			.container{
+				section.container-title{
+					.title-section{
+						font-size: 50px;
+					}
+					span{
+						font-size: 25px;
+					}
+					>div:nth-child(1){
+						margin-bottom: 0px;
+					}
+				}
+			}
+		}
+	}
+}

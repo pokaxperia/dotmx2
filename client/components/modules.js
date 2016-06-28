@@ -5,6 +5,8 @@
 	angular.module('dotmx',[
 		'routes',
 		'estrategias',
+		'implementacion',
+		'calculadora',
 		'guia',
 		'guide.steps.directive',
 		'guide.id.directive',
@@ -16,7 +18,7 @@
 		'menu.directive',
 		'mapa',
 		'modal.controller',
-		'modelo',
+		'estimaciones',
 		'ui.bootstrap'
 		]
 	)

@@ -150,8 +150,14 @@
 .guide-b{
   background: url('../images/guide.jpg') no-repeat;
 }
+.section1-b{
+  background: url('../images/section1.jpg') no-repeat;
+}
 .strategies-b{
   background: url('../images/strategies.jpg') no-repeat;
+}
+.section2-b{
+  background: url('../images/section2.jpg') no-repeat;
 }
 .model-b{
   background: url('../images/model.jpg') no-repeat;
@@ -163,7 +169,9 @@
   background: url('../images/files.jpg') no-repeat;
 }
 .guide-b,
+.section1-b,
 .strategies-b,
+.section2-b,
 .model-b,
 .map-b,
 .files-b,
@@ -213,7 +221,9 @@
     }
   }
   .guide-b,
+  .section1-b,
   .strategies-b,
+  .section2-b,
   .model-b,
   .map-b,
   .files-b,
@@ -223,7 +233,9 @@
 }
 @media (min-width: 992px){
   .guide-b,
+  .section1-b,
   .strategies-b,
+  .section2-b,
   .model-b,
   .map-b,
   .files-b,
