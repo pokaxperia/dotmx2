@@ -218,12 +218,13 @@
 				arrayAgencies.forEach(function(entry) {
 					agenciesSelect.push($(entry).attr("id"));
 				});
-				
+				console.log(agenciesSelect)
 				/*lineas*/
 				var lineasGeo = L.geoJson(lineas, {
 					style: lineStyle,
 					filter: function (feature, layer) {
 						if(agenciesSelect.indexOf(feature.properties.Agencia) !== -1) return feature.properties;
+						console.log(feature.properties)
 						return false;
 					}
 				});
@@ -292,6 +293,12 @@
 						$("#info-Name").empty().html(feature.properties.Name);
 					} else {
 						$("#info-Name").empty().html(feature.properties.Nombre);
+					}
+					if(ciudad=="gdl") {
+						$("#info-Name").empty().html(feature.properties.Name);
+						console.log($("#info-Name").empty().html(feature.properties.Name))
+					} else {
+						$("#info-Name").empty().html(feature.properties.nombre);
 					}
 
 					$("#info-Agencia").empty().html(feature.properties.Agencia);
